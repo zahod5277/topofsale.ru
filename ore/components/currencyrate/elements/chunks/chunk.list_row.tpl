@@ -1,0 +1,1 @@
+<option value="[[+charcode]]" [[+selected]]>[[+charcode]]</option>

@@ -1,0 +1,44 @@
+Changelog for currencyrate.
+
+1.0.8 (26.10.2016)
+==============
+- Reformat code
+
+1.0.7 (09.03.2016)
+==============
+- Add active combo
+
+1.0.6
+==============
+- fix lexicon
+- font-awesome
+
+1.0.5
+==============
+- small refactoring
+- add create window
+- add update window
+
+1.0.4
+==============
+- add active, rank for currency
+- add sort rank
+- add Rub currency
+- add list snippet
+
+1.0.3
+==============
+- add method clear the cache
+
+1.0.2-beta
+==============
+- add ctx in web-connector
+- add apc.cache_by_default Off
+
+1.0.1-beta
+==============
+- add script update from the front.
+
+1.0.0-beta
+==============
+- Initial release.

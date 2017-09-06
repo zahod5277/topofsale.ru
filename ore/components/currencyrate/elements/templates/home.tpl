@@ -1,0 +1,1 @@
+<div id="currencyrate-panel-home-div"></div>

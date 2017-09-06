@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="currencyrate" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="currencyrate"
+	   version="1.1">
+
+	<object class="CRlist" table="currency_rate_list" extends="xPDOSimpleObject">
+        <field key="numcode" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true" default="0" />
+        <field key="charcode" dbtype="varchar" precision="3" phptype="varchar" null="true" default="" />
+        <field key="nominal" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true" default="0" />
+        <field key="name" dbtype="varchar" precision="100" phptype="varchar" null="true" default="" />
+        <field key="value" dbtype="decimal" precision="12,4" phptype="float" null="true" default="0" />
+        <field key="rate" dbtype="varchar" precision="100" phptype="varchar" null="true" default="0" />
+        <field key="valuerate" dbtype="decimal" precision="12,4" phptype="float" null="true" default="0" />
+        <field key="active" dbtype="tinyint" precision="1" phptype="integer" null="true" default="0" />
+        <field key="rank" dbtype="tinyint" precision="1" phptype="integer" attributes="unsigned" null="true" default="0" />
+
+        <index alias="numcode" name="numcode" primary="false" unique="false" type="BTREE" >
+            <column key="numcode" length="" collation="A" null="false" />
+        </index>
+        <index alias="charcode" name="charcode" primary="false" unique="false" type="BTREE" >
+            <column key="charcode" length="" collation="A" null="false" />
+        </index>
+        <index alias="nominal" name="nominal" primary="false" unique="false" type="BTREE" >
+            <column key="nominal" length="" collation="A" null="false" />
+        </index>
+        <index alias="name" name="name" primary="false" unique="false" type="BTREE" >
+            <column key="name" length="" collation="A" null="false" />
+        </index>
+        <index alias="value" name="value" primary="false" unique="false" type="BTREE">
+            <column key="value" length="" collation="A" null="false" />
+        </index>
+        <index alias="rate" name="rate" primary="false" unique="false" type="BTREE" >
+            <column key="rate" length="" collation="A" null="false" />
+        </index>
+        <index alias="valuerate" name="valuerate" primary="false" unique="false" type="BTREE">
+            <column key="valuerate" length="" collation="A" null="false" />
+        </index>
+        <index alias="active" name="active" primary="false" unique="false" type="BTREE" >
+            <column key="active" length="" collation="A" null="false" />
+        </index>
+
+	</object>
+
+</model>
