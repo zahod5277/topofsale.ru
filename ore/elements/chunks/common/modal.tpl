@@ -26,6 +26,20 @@
     'form' => '@FILE:chunks/forms/cheaper.form.tpl'
 ])}
 
+{$_modx->runSnippet('!AjaxForm',[
+    'snippet' => 'FormIt',
+    'hooks' => 'spam,email,FormItSaveForm,filesender',
+    'emailSubject' => 'Заказ с сайта TopOfSale.ru',
+    'emailTo' => $_modx->config.orderMail,
+    'emailFrom' => $_modx->config.siteEmail,
+    'emailTpl' => 'order.email.tpl',
+    'emailFromName' => 'Сайт topofsale.ru',
+    'validate' => 'name:required,phone:required',
+    'validationErrorMessage' => '<p>В форме содержатся ошибки!</p>',
+    'successMessage' => '<p>Сообщение успешно отправлено. <br> Мы свяжемся в самое ближайшее время!</p>',
+    'form' => '@FILE:chunks/forms/order.form.tpl'
+])}
+
 <!-- modal -->
 <div id="tocart-modal" class="popup" data-popup-name="gp-popup">
     <div class="popup-content">

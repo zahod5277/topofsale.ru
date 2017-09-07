@@ -15,6 +15,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="assets/templates/default/favicons/apple-touch-icon-152x152.png" type="" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/templates/default/favicons/apple-touch-icon-180x180.png" type="" />
     <!--viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <!--modernizr-->
     <script src="assets/templates/default/js/modernizr-custom.js"></script>

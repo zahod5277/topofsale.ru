@@ -13200,39 +13200,8 @@ var widgetsSlider = $.widget( "ui.slider", $.ui.mouse, {
 		arrows: false,
 		dots: true
 	});
-	/*----------------------------------------
-	 carousel-card
-	 ----------------------------------------*/
-	 $('.view-carousel').slick({
-		infinite: false,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		asNavFor: '.thumbs-view'
-	});
-	$('.thumbs-view').slick({
-		infinite: false,
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		asNavFor: '.view-carousel',
-		focusOnSelect: true,
-		dots: false,
-		vertical: true,
-		verticalSwiping: true,
-		responsive: [
-		{
-			breakpoint: 768,
-			settings: {
-				vertical: false,
-				verticalSwiping: false,
-				slidesToShow: 3
-			}
-		}
-	]
-	});
 
-
-/* TABS */
+        /* TABS */
 
 	$('.tabs li').click(function(){
 		var tab_id = $(this).attr('data-tab');
@@ -13355,6 +13324,11 @@ jQuery("input#maxCost").change(function(){
 	jQuery("#price-slider").slider("values",1,value2);
 });
 
+jQuery('[data-popup-id="#order"]').on('click', function(){
+    var productName = jQuery(this).parents('.ms2_form').find('input[name="pagetitle"]').val();
+    jQuery('#order .popup__title').html('Заказ '+ productName);
+    jQuery('#order [name="product"]').val(productName);
+});
 
 	// $('#popup').gpPopup();
 	// // Некоторое время спустя...

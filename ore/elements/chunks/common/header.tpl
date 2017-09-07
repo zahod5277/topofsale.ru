@@ -1,4 +1,4 @@
-<header>
+<header class="sticky-header">
     <!-- top -->
     <div class="header-top clearfix">
         <div class="container">
@@ -67,10 +67,10 @@
                 <!-- contacts -->
                 <div class="header-info-contacts">
                     <a href="tel:{$_modx->config.sitePhone}" class="link-phone"><i class="icon icon-call-answer"></i> {$_modx->config.sitePhone}</a>
-                    <div class="info-value">
+                    {*<div class="info-value">
                         <span class="info-value__dollars">$ {$_modx->getPlaceholder('+USD')|number: 2 : '.' : ' '+(0.4)}</span>
                         <span class="info-value__euro">€ {$_modx->getPlaceholder('+EUR')|number: 2 : '.' : ' '+(0.4)}</span>
-                    </div>
+                    </div>*}
                     <a href="#" class="more" data-popup="open" data-popup-id="#popup" style="font-size:0.975rem !important;color:#f6862d !important;font-style:normal;border-bottom:1px solid #f9b48a;">{'lw.call-me'|lexicon}</a>
                     <!-- value -->
                 </div>

@@ -20,7 +20,8 @@
                 {/if}
             </div>
             <form method="post" class="ms2_form">
-                <button type="submit" name="ms2_action" value="cart/add" class="btn">
+                <input type="hidden" name="pagetitle" value="{$pagetitle}"/>
+                <button type="submit" data-popup="open" data-popup-id="#order" class="btn">
                     {'ms2_frontend_add_to_cart'|lexicon}
                 </button>
                 <input type="hidden" name="id" value="{$id}">
