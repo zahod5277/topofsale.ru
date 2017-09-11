@@ -26,7 +26,7 @@
                     'where' => '{ "localizator.key" : "' ~ ('localizator_key' | option) ~ '"}',
                     'tplOuter' => '@FILE:chunks/common/mainMenuOuter.tpl',
                     'tpl' => '@FILE:chunks/common/mainMenuRow.tpl',
-                    'resources' => '-9,-8'
+                    'resources' => '-9'
                 ])}
                 <ul class="menu-contacts">
                     <li><a href="tel:89558965636">8 (955) 896-56--36</a>

@@ -21,9 +21,7 @@
             </div>
             <form method="post" class="ms2_form">
                 <input type="hidden" name="pagetitle" value="{$pagetitle}"/>
-                <button type="submit" data-popup="open" data-popup-id="#order" class="btn">
-                    {'ms2_frontend_add_to_cart'|lexicon}
-                </button>
+                <button type="submit" name="ms2_action" value="cart/add"  class="btn">{'lw.buy'|lexicon}</button>
                 <input type="hidden" name="id" value="{$id}">
                 <input type="hidden" name="count" value="1">
                 <input type="hidden" name="options" value="[]">

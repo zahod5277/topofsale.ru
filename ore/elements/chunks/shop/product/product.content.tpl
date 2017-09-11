@@ -24,14 +24,13 @@
                     <div class="product-price__value">{$price|number:0:'.':' '} &#8381;</div>
                     {if $old_price?}
                         <div class="product-price__value">
-                            <span class="card-price__old card-price__old_product-content">{$price|number:0:'.':' '} &#8381;</span>
+                            <span class="card-price__old card-price__old_product-content">{$old_price|number:0:'.':' '} &#8381;</span>
                         </div>    
                     {/if}
                     <div class="product-info-footer">
                         <form class="form-horizontal ms2_form" method="post">
                             <input type="hidden" name="id" value="{$_modx->resource.id}"/>
-                            <input type="hidden" name="pagetitle" value="{$_modx->resource.pagetitle}"/>
-                            <button type="submit" data-popup="open" data-popup-id="#order" class="btn">{'lw.buy'|lexicon}</button>
+                            <button type="submit" name="ms2_action" value="cart/add"  class="btn">{'lw.buy'|lexicon}</button>
                             <a href="#" data-popup="open" data-popup-id="#cheaper">{'lw.cheaper'|lexicon}</a>
                             <input type="hidden" name="count" id="product_price" class="input-sm form-control" value="1"/>
                         </form>
