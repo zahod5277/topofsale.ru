@@ -1,0 +1,119 @@
+/* ==========================================================================
+	 CARD
+	 ===========================================================================*/
+
+.card{
+  position: relative;
+  width: 100%;
+  height: 465px;
+  padding: 20px 23px;
+  overflow: hidden;
+  box-shadow: 2px 3px 4px rgba(0, 1, 5, .16);
+  border: 1px solid #eaeaea;
+  background-color: #fff;
+  transition: 0.5s ease all;
+  border-radius: 4px;
+}
+
+.card:hover{
+  border-color: #f6862d;
+  transition: all .5s ease;
+}
+
+.card .btn{
+  width: 100%;
+  transition: 0.5s ease all;
+}
+
+.card-image{
+  display: block;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 29px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.card__title{
+  display: block;
+  min-height: 40px;
+  color: #634426;
+  font-family: "Open Sans", serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.1;
+}
+
+.card__text{
+  color: #634426;
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 1.2;
+  font-style: normal;
+  margin-top: 8px;
+  margin-bottom: 23px;
+  max-height: 48px;
+  overflow: hidden;
+}
+
+.card-footer{
+  position: absolute;
+  z-index: 3;
+  bottom: 20px;
+  left: 23px;
+  right: 23px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-price{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-family: "Open Sans", serif;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.card-price> span:after{
+  content: "₽";
+  font-family: 'PT Sans', sans-serif;
+  color: currentColor;
+  margin-left: 5px;
+}
+
+.card-price__old{
+  color: #988675;
+  font-size: 16px;
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+.card-price__old_product-content{
+    font-size: 1.3rem;
+}
+
+.card-price__new{
+  color: #f6862d;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+/* LIST */
+
+/* end card */

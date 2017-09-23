@@ -39,6 +39,7 @@
     <!--modernizr-->
     <script src="assets/templates/default/js/modernizr-custom.js"></script>
     <!--styles-->
-    <link rel="stylesheet" type="text/css" href="assets/templates/default/css/app.css" />
+    {var $timestamp = ''|date_format:'%s'}
+    <link rel="stylesheet" type="text/css" href="assets/templates/default/css/app.min.css?{$timestamp}" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 </head>

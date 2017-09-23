@@ -1,0 +1,44 @@
+/* ==========================================================================
+   BREADCRUMBS
+   ===========================================================================*/
+
+.breadcrumbs{
+  position: relative;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.breadcrumbs-list{
+  display: block;
+  width: 100%;
+  background-color: #f7f7f5;
+  padding-left: 25px;
+  height: 40px;
+}
+
+.breadcrumbs-list li{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 6px;
+  color: #cc8f54;
+  line-height: 20px;
+}
+
+.breadcrumbs-list li:not(:last-child):after{
+  content: "/ ";
+  display: inline-block;
+  margin: 0 3px;
+  color: #a58d76;
+  line-height: 20px;
+}
+
+.breadcrumbs-list li> a{
+  color: #cc8f54;
+  line-height: 20px;
+}
+
+.breadcrumbs-list li:last-child{
+    line-height: 28px;
+}
+
+/* end breadcrumbs */

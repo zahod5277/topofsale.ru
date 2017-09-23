@@ -1,0 +1,114 @@
+/* ==========================================================================
+	 FOOTER
+	 ===========================================================================*/
+
+.footer{
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  background-color: #5b6139;
+}
+
+.footer::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* contacts */
+
+.footer-info-contacts{
+  float: left;
+  width: 31%;
+  padding-top: 5px;
+}
+
+.footer-info-contacts .icon{
+  vertical-align: text-top;
+  top: 3px;
+}
+
+.footer-info-contacts .link-phone{
+  color: #fdc689;
+}
+
+.footer-info-contacts .link-phone:hover{
+  color: #fdc689;
+}
+
+.footer-info-contacts .more{
+  color: #fdc689;
+  font-style: italic;
+  font-size: 14px;
+  border-bottom: 1px dashed #fdc689;
+}
+
+.footer-info-contacts .more:hover {
+    border-bottom: none;
+}
+.footer-info-contacts .info-value> span{
+  color: #fdc689;
+  font-size: 16px;
+}
+
+/* lists */
+
+.footer-center{
+  float: left;
+  width: 66%;
+}
+
+.footer-list{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -.36em;
+  padding-right: 5px;
+}
+
+.footer-list li{
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 23px;
+  color: #fdc689;
+}
+
+.footer-list li:first-child{
+  margin-bottom: 7px;
+}
+
+.footer-list a{
+  font-size: 14px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #fdc689;
+  line-height: 22px;
+}
+
+.footer-list a:hover{
+  color: #fcae57;
+}
+
+/* address */
+
+.footer-address{
+  float: right;
+  width: 25%;
+  text-align: right;
+}
+
+.footer-address .icon{
+  margin-right: 15px;
+  vertical-align: text-top;
+}
+
+.footer-address> span{
+  display: block;
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #fdc689;
+  font-weight: 400;
+  line-height: 38px;
+}
+
+/* end footer */

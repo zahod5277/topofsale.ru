@@ -1,0 +1,91 @@
+/* ==========================================================================
+	 MAIN SLIDER
+	 ===========================================================================*/
+
+.section-slider{
+  padding-left: 80px;
+  padding-right: 80px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section-slider .slider{
+  margin-bottom: 0;
+}
+
+.slider{
+  height: 390px;
+  overflow: hidden;
+}
+
+.slider .slick-list,
+.slider .slick-track{
+  height: 100%;
+}
+
+.slider .slick-dots{
+  bottom: 20px;
+}
+
+.slider .slick-dots li button:before{
+  font-size: 40px;
+  font-size: 2.5rem;
+  color: #78804c;
+  opacity: 1;
+}
+
+.slider .slick-dots li.slick-active button:before{
+  color: #f6862d;
+}
+
+.slider-item{
+  height: 100%;
+  padding-top: 73px;
+  padding-left: 48px;
+  background: url("../uploads/slider-1.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.slider-item__title{
+  font-family: "Open Sans", serif;
+  font-size: 42px;
+  font-size: 2.625rem;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.slider-item__text{
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 400;
+  line-height: 39px;
+}
+
+.slider-item__price{
+  margin-top: 26px;
+  font-family: "Open Sans", serif;
+  font-size: 43px;
+  font-size: 2.6875rem;
+  color: #fdc689;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.btn.btn_slider{
+  margin-top: 37px;
+  min-width: 220px;
+  height: 55px;
+  line-height: 53px;
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #fff;
+}
+
+.btn.btn_slider:hover{
+  color: #634426;
+}
+
+/* end main slider */

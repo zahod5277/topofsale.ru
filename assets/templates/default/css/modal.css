@@ -1,0 +1,224 @@
+/* ==========================================================================
+         MODAL
+         ===========================================================================*/
+
+.popup,
+.popup-overlay{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 991;
+}
+
+.popup{
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.popup-overlay{
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, .9);
+    opacity: 0;
+    transition: opacity .3s;
+    -webkit-backface-visibility: hidden;
+}
+
+.popup.popup_open .popup-overlay{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup__close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 9;
+    padding: 0;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    background-color: transparent;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    color: #000;
+}
+
+.popup-content{
+    position: relative;
+    z-index: 5;
+    width: 50%;
+    max-width: 500px;
+    min-width: 290px;
+    min-height: 300px;
+    border: 1px solid #fdc689;
+    background-color: #fff;
+    padding: 19px  40px;
+    text-align: center;
+    opacity: 0;
+}
+
+.popup.popup_open .popup-content{
+    pointer-events: auto;
+}
+
+.popup-header{
+    width: 100%;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.popup__title{
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 22px;
+}
+
+.popup-body{
+    width: 100%;
+    padding-top: 11px;
+}
+
+.popup-body .form-group:last-child{
+    text-align: left;
+}
+
+.popup-body .btn{
+    margin-top: 0;
+}
+
+.popup-footer{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.popup-footer p{
+    font-size: 12px;
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0;
+}
+
+.popup-footer a{
+    font-size: 12px;
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: underline;
+}
+
+.popup-footer a:hover{
+    text-decoration: none;
+}
+
+/* Content */
+
+.popup-overlay{
+    transition-duration: .4s;
+}
+
+.popup.popup_open .popup-content,
+.popup.popup_close .popup-content{
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.popup.popup_open .popup-content{
+    -webkit-animation-name: anim-open;
+    animation-name: anim-open;
+    -webkit-animation-timing-function: cubic-bezier(.6, 0, .4, 1);
+    animation-timing-function: cubic-bezier(.6, 0, .4, 1);
+}
+
+.popup.popup_close .popup-content{
+    -webkit-animation-name: anim-close;
+    animation-name: anim-close;
+}
+
+@-webkit-keyframes anim-open{
+    0%{
+        opacity: 0;
+        -webkit-transform: scale3d(0, 0, 1);
+    }
+
+    100%{
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes anim-open{
+    0%{
+        opacity: 0;
+        -webkit-transform: scale3d(0, 0, 1);
+        transform: scale3d(0, 0, 1);
+    }
+
+    100%{
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@-webkit-keyframes anim-close{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        -webkit-transform: scale3d(.5, .5, 1);
+    }
+}
+
+@keyframes anim-close{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        -webkit-transform: scale3d(.5, .5, 1);
+        transform: scale3d(.5, .5, 1);
+    }
+}
+
+#tocart-modal .popup-content{
+    min-height: 150px;
+}
+
+#tocart-modal .popup-body button, #tocart-modal .popup-body a{
+    display: inline-block;
+    min-width: 195px;
+    margin-bottom: 20px;
+}
+
+#tocart-modal .popup-body a{
+    margin-left: 10px;
+    background: #fdba70;
+}
+
+#tocart-modal .popup__title{
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+/* end modal */

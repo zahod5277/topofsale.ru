@@ -1,0 +1,81 @@
+/* ==========================================================================
+         CARD ITEM
+         ===========================================================================*/
+
+.card_basket{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.card_basket:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.card_basket .card-image{
+    float: left;
+    /*  width: 38%; */
+    width: 70%;
+    margin-right: 7%;
+    margin-top: -30%;
+}
+
+.card_basket .card__text{
+    padding-right: 10px;
+    margin-bottom: 33px;
+}
+
+.card_basket .card-footer{
+    position: static;
+    padding-right: 110px;
+}
+
+.card_basket .card__title{
+    line-height: 1.6;
+    text-decoration: underline;
+}
+
+.card_basket .card__title:hover{
+    text-decoration: none;
+}
+
+.card_basket .card-price{
+    margin-bottom: 5px;
+}
+
+.card_basket .card-articul{
+    position: absolute;
+    right: 20px;
+    margin: 0 auto;
+    bottom: 20px;
+    width: 305px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-family: "PT Sans", Arial, sans-serif;
+    color: #fdc689;
+    font-size: 14px;
+    font-size: .875rem;
+}
+
+.card_basket .card-articul__delete{
+    background: transparent;
+    border:none;
+    font-family: "PT Sans", Arial, sans-serif;
+    color: #634426;
+    font-weight: 400;
+    text-decoration: underline;
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+.card_basket .card-articul__delete:hover{
+    text-decoration: none;
+}

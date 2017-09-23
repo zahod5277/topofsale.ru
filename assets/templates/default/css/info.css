@@ -1,0 +1,132 @@
+.info{
+  width: 100%;
+  padding-left: 32px;
+}
+
+.info-row{
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.info-col{
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.info-col:first-child{
+  width: 30%;
+}
+
+.info-col:nth-child(2){
+  width: 27%;
+}
+
+.info-col:last-child{
+  width: 43%;
+}
+
+.info-col .info-item p{
+  font-size: 16px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.info-col .info-item div{
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.info-col .info-item div i{
+  margin-right: 8px;
+}
+
+.info-col .info-item:not(:last-child){
+  margin-bottom: 25px;
+}
+
+.info-col .info-item .mail> a{
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.info-col .info-item_requisites p{
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 1;
+}
+
+.info-col .info-item_phone .phone{
+  font-family: "Open Sans", serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.info-col .info-item_phone .phone i{
+  top: -3px;
+  margin-right: 4px;
+}
+
+.map{
+  height: 470px;
+  width: 100%;
+  margin-top: 50px;
+  overflow: hidden;
+  float: left;
+}
+
+.card-row{
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.card-col-7{
+  width: 54%;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card-col-6{
+  width: 50%;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card-col-5{
+  width: 46%;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card-col-4{
+  width: 33%;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card-col-3{
+  width: 25%;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card-col-2{
+    width: 14%;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#msOrder{
+    margin-top: 0px!important;
+}
