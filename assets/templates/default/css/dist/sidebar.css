@@ -1,6 +1,6 @@
 /* ==========================================================================
 	 SIDEBAR
-	 ===========================================================================*/
+ ===========================================================================*/
 
 .sidebar{
   margin-bottom: 20px;
@@ -127,6 +127,18 @@
 .formCost span{
   float: right;
   margin-right: 15px;
+}
+
+.filter-catalog ul{
+    padding-left: 20px;
+}
+
+.filter-catalog ul li{
+    padding-bottom: 0px;
+}
+
+.filter-catalog ul li a{
+    color:black;
 }
 
 /* end sidebar */

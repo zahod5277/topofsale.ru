@@ -681,6 +681,15 @@
   .pages ul{
     background: #eee;
   }
+  
+  .header__social-links{
+    display: block;
+    margin: 20px 0px;
+  }
+  
+  .header__social-links-item{
+      font-size: 22px;
+  }
 }
 
 @media only screen and (max-width: 480px){

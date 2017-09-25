@@ -6,7 +6,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 20px 23px;
+    overflow: hidden;
+    box-shadow: 2px 3px 4px rgba(0, 1, 5, .16);
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    transition: 0.5s ease all;
+    border-radius: 4px;
 }
 
 .card_basket:not(:last-child){
@@ -26,9 +35,10 @@
     margin-bottom: 33px;
 }
 
-.card_basket .card-footer{
-    position: static;
-    padding-right: 110px;
+@media(max-width:767px){
+    .cart-item-footer{
+        margin: 20px 0px;
+    }
 }
 
 .card_basket .card__title{

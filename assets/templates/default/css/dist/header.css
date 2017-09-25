@@ -84,6 +84,7 @@
 }
 
 .menu-list li{
+  padding-bottom: 0px;
   display: inline-block;
   border-bottom: 3px solid transparent;
 }
@@ -210,8 +211,8 @@
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 30px;
-  text-decoration: underline;
-  text-transform: lowercase;
+  text-decoration: none;
+  text-transform: capitalize;
 }
 
 .link-lang:hover{
@@ -338,8 +339,26 @@ body.home .header-bottom .container{
   line-height: 30px;
 }
 
-.link-phone .icon{
+.link-phone .fa{
+  color:#f6862d;
   margin-right: 3px;
+}
+
+.header__social-links-item{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.header__social-links-item .fa-vk{
+    color:#507299;
+}
+
+.header__social-links-item .fa-whatsapp{
+    color: #00e676;
+}
+
+.header__social-links-item .fa-telegram{
+    color: #33aae0;
 }
 
 .header-info-address{
@@ -362,8 +381,9 @@ body.home .header-bottom .container{
     height: 120px !important;
 }
 
-.header-info-address .icon-clock{
-  margin-right: 10px;
+.header-info-address .fa{
+  color:#f6862d;
+  transform: rotateY(180deg);
 }
 
 /* end header */

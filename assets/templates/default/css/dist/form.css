@@ -1,0 +1,259 @@
+/*----------------------------------------
+	FORM
+----------------------------------------*/
+
+.form{
+  position: relative;
+  display: block;
+}
+
+.form-group{
+  position: relative;
+}
+
+.form-group:not(:last-child){
+  margin-bottom: 17px;
+}
+
+.form-group_horizontal{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -.36em;
+}
+
+/* input */
+
+.form-input{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 32px;
+  padding: 0 10px 0 13px;
+  color: #a4a4a4;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 30px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom-color: #f6862d;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+.form-input:focus{
+  outline: none;
+}
+
+.form-input:focus::-webkit-input-placeholder{
+  color: transparent;
+  transition: all .3s;
+}
+
+.form-input:focus:-moz-placeholder{
+  /* Firefox 18- */
+  color: transparent;
+  transition: all .3s;
+}
+
+.form-input:focus::-moz-placeholder{
+  /* Firefox 19+ */
+  color: transparent;
+  transition: all .3s;
+}
+
+.form-input:focus:-ms-input-placeholder{
+  color: transparent;
+  transition: all .3s;
+}
+
+
+/* textarea */
+
+textarea{
+  resize: none;
+}
+
+.form-textarea{
+  width: 100%;
+  height: 100px;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  border-radius: 22px;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.form-textarea:focus{
+  outline: none;
+}
+
+.form-textarea:focus::-webkit-input-placeholder{
+  color: transparent;
+  transition: all .3s;
+}
+
+.form-textarea:focus:-moz-placeholder{
+  /* Firefox 18- */
+  color: transparent;
+  transition: all .3s;
+}
+
+.form-textarea:focus::-moz-placeholder{
+  /* Firefox 19+ */
+  color: transparent;
+  transition: all .3s;
+}
+
+.form-textarea:focus:-ms-input-placeholder{
+  color: transparent;
+  transition: all .3s;
+}
+
+/*fieldset*/
+
+fieldset{
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* label */
+
+label.form-label{
+  position: relative;
+  display: inline-block;
+}
+
+label.error{
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  z-index: 4;
+  display: inline-block;
+  color: #634426;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* warning */
+
+sup.warning{
+  top: 0;
+  color: #d00;
+  font-size: 14px;
+  font-size: .875rem;
+}
+
+/* ORDER */
+
+.form.form_order{
+  width: 100%;
+  padding: 35px 95px 35px 50px;
+  min-height: 478px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+  border: 1px solid #f6862d;
+}
+
+.form p{
+  margin: 30px 0;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20px;
+}
+
+.form-body{
+  padding-top: 10px;
+}
+
+.form__title{
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.form_order .wrap-radio{
+    margin-bottom: 10px;
+}
+
+/* SEARCH */
+
+.form.form_search{
+  display: inline-block;
+  margin-top: 8px;
+  width: 380px;
+  float: left;
+  margin-right: 20px;
+}
+
+.form.form_search .form-input{
+  font-style: normal;
+  padding-left: 3px;
+  color: #fdc689;
+  border-bottom-color: transparent;
+  padding-right: 40px;
+}
+
+.form.form_search .form-input::-webkit-input-placeholder{
+  color: #fdc689;
+}
+
+.form.form_search .form-input:-moz-placeholder{
+  /* Firefox 18- */
+  color: #fdc689;
+}
+
+.form.form_search .form-input::-moz-placeholder{
+  /* Firefox 19+ */
+  color: #fdc689;
+}
+
+.form.form_search .form-input:-ms-input-placeholder{
+  color: #fdc689;
+}
+
+.form.form_search .form-input:focus{
+  outline: none;
+}
+
+.form.form_search .form-input:focus::-webkit-input-placeholder{
+  color: transparent;
+  transition: all .3s;
+}
+
+.form.form_search .form-input:focus:-moz-placeholder{
+  /* Firefox 18- */
+  color: transparent;
+  transition: all .3s;
+}
+
+.form.form_search .form-input:focus::-moz-placeholder{
+  /* Firefox 19+ */
+  color: transparent;
+  transition: all .3s;
+}
+
+.form.form_search .form-input:focus:-ms-input-placeholder{
+  color: transparent;
+  transition: all .3s;
+}
+
+.btn-search{
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 100%;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* end forms */

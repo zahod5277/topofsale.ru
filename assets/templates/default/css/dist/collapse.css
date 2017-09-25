@@ -1,0 +1,64 @@
+/*----------------------------------------
+	COLLAPSE
+----------------------------------------*/
+
+.collapse{
+  width: 100%;
+}
+
+.collapse-header{
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  padding: 17px 25px;
+  font-family: "Open Sans", serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.collapse-header .icon-angel-down{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  transition: all .5s ease;
+}
+
+.collapse-header.clicked .icon-angel-down:before{
+  -webkit-transform: rotate(312deg);
+          transform: rotate(312deg);
+  transition: all .5s ease;
+}
+
+.icon-angel-down{
+  display: inline-block;
+  color: #634426;
+}
+
+.icon-angel-down:before{
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  transition: all .5s ease;
+}
+
+.collapse-panel{
+  display: none;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.collapse-panel.active{
+  display: block;
+}

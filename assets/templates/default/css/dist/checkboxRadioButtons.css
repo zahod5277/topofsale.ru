@@ -1,0 +1,205 @@
+/*----------------------------------------
+	CHECKBOX
+----------------------------------------*/
+
+.checkbox-input{
+  opacity: 0;
+  width: 0;
+  position: absolute;
+}
+
+.checkbox-label{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 25px;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.checkbox-label:before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fdc689;
+  background-color: #fff;
+}
+
+.checkbox-input:checked+ label:before{
+  background-image: url("data:image/svg+xml,%3Csvg%20id%3D%22%D0%A1%D0%BB%D0%BE%D0%B9_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cstyle%3E.st0%7Bfill%3Anone%3Bstroke%3A%23634426%3Bstroke-width%3A2%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M2%2020l10%208L30%204%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 12px;
+}
+
+/* end checkbox*/
+
+/*----------------------------------------
+	RADIO
+----------------------------------------*/
+
+.wrap-radio{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.radio-input{
+  opacity: 0;
+  width: 0;
+}
+
+.radio-label{
+  position: relative;
+  display: inline-block;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.radio-label:before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #fdc689;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.radio-input:checked+ label:before{
+  background-color: #f6862d;
+  box-shadow: 0 0 0 2px #fff inset;
+}
+
+/* end radio*/
+
+/* ==========================================================================
+	 BUTTONS
+	 ===========================================================================*/
+
+button:focus,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus{
+  outline: none;
+}
+
+.btn,
+.btn[type="button"]{
+  position: relative;
+  display: inline-block;
+  min-width: 160px;
+  height: 40px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 16px;
+  color: #634426;
+  line-height: 40px;
+  font-weight: 400;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s ease all;
+  z-index: 3;
+  text-decoration: none;
+  vertical-align: middle;
+  border-radius: 4px;
+  border: 1px solid #f6862d;
+  cursor: pointer;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-style: normal;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.btn:hover,
+.btn[type="button"]:hover{
+  border-color: #f6862d;
+  color: #fff;
+  background-color: #f6862d;
+}
+
+.btn:active,
+.btn[type="button"]:active{
+  background-color: #fdba70;
+}
+
+.btn.btn_full,
+.btn[type="button"].btn_full{
+  width: 100%;
+  min-width: 0;
+}
+
+.btn.btn_secondary,
+.btn[type="button"].btn_secondary{
+  color: #fff;
+}
+
+.btn.btn_secondary:hover,
+.btn[type="button"].btn_secondary:hover{
+  color: #634426;
+  border-color: #fdc689;
+  background-color: #fdc689;
+}
+
+.btn.btn_secondary:active,
+.btn[type="button"].btn_secondary:active{
+  color: #634426;
+  background-color: #fdba70;
+}
+
+.btn.btn_form,
+.btn[type="button"].btn_form{
+  margin-top: 15px;
+  text-transform: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 46px;
+  line-height: 46px;
+  border-color: #f6862d;
+  color: #fff;
+  background-color: #f6862d;
+}
+
+.btn.btn_form:hover,
+.btn[type="button"].btn_form:hover{
+  color: #634426;
+  background-color: transparent;
+}
+
+.btn[type=button]{
+  -webkit-appearance: inherit;
+}
+
+/* Отключение кнопки */
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn{
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: .25;
+  filter: alpha(opacity=25);
+  box-shadow: none;
+}
+
+/* end buttons*/
