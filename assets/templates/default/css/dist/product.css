@@ -176,7 +176,7 @@
 .table-characteristics td{
     font-size: 1.1rem;
     line-height: 1.5rem;
-    padding: 5px;
+    padding: 10px;
 }
 
 .table-characteristics tr:nth-child(even){

@@ -7,23 +7,23 @@
     {'ms2_cart_is_empty' | lexicon}
 {else}
     <div class="card-col-12">
-        <div id="msCart" class="row container">
+        <div id="msCart" class="container">
             {foreach $products as $product}
                 <!-- card -->
-                <div class="card card_basket" id="{$product.key}">
-                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+                <div class="card_basket" id="{$product.key}">
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <a href="{$product.id|url}">
                         <img src="{$product.card}" alt="{$pagetitle}">
                     </a>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-12 col-sm-7 col-md-6 col-lg-6">
                         <a href="{$product.id|url}" class="card__title">{$product.pagetitle}</a>
                        <!--  <p class="card__text">{$product.introtext|truncate:70:'...'}</p> -->
                         <span class="card-articul__number">{'lw.product_article'|lexicon} {$product.article}</span>
                     </div>
-                    <div class="col-xs-12 col-sm-6 no-gutters">
+                    <div class="col-xs-12 col-sm-6  col-lg-3">
                     <!-- price -->
-                    <div class="card-footer">
+                    <div class="cart-item-footer">
                         <div class="card-price">
                             <span class="card-price__new">{$product.price|number:0:'.':' '}</span>
                             {if $product.old_price?}
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6">
+                    <div class="col-xs-12 col-sm-6 col-lg-1">
                     <!-- articul -->
                     <form method="post" class="ms2_form">
                         <input type="hidden" name="key" value="{$product.key}">
@@ -47,6 +47,11 @@
                     </div>
                 </div>
             {/foreach}
+        </div>
+        <div class="col-xs-12 container goToOrderBtn">
+            <a href="{'664'|url}" title="Оформить заказ" class="btn btn_form">
+                Перейти к оформлению заказа
+            </a>
         </div>
     </div>
 {/if}

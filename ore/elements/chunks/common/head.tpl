@@ -41,5 +41,7 @@
     <!--styles-->
     {var $timestamp = ''|date_format:'%s'}
     <link rel="stylesheet" type="text/css" href="assets/templates/default/css/app.min.css?{$timestamp}" />
+    <link rel="stylesheet" type="text/css" href="assets/templates/default/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/templates/default/css/fa-viber.css" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 </head>

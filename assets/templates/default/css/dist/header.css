@@ -357,6 +357,12 @@ body.home .header-bottom .container{
     color: #00e676;
 }
 
+.header__social-links-item .fa-viber{
+    color: #574e92;
+    font-size: 14px;
+}
+
+
 .header__social-links-item .fa-telegram{
     color: #33aae0;
 }

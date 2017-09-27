@@ -8,7 +8,11 @@
                 {$_modx->resource.content}
             {/if}
         {else}
-        {$_modx->resource.content}
+        {if $_modx->resource.content==''}
+            {$_modx->resource.localizator_content}
+            {else}
+            {$_modx->resource.content}
+        {/if}
        {/if}
     </div>
 </main>

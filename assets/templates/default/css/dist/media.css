@@ -166,6 +166,14 @@
     font-size: 11px;
   }
   
+  .product-price__value{
+      float:none;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 10px;
+      font-size: 1rem;
+  }
+  
 }
 
 @media only screen and (max-width: 991px){
