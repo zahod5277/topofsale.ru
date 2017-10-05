@@ -135,10 +135,32 @@
 
 .filter-catalog ul li{
     padding-bottom: 0px;
+    padding-right: 17px;
 }
 
 .filter-catalog ul li a{
     color:black;
+}
+
+.filter-catalog__item-level1>a::after{
+    content: '+';
+    display: inline-block;
+    color:black;
+    float:right;
+    position: relative;
+    top: 3px;
+}
+
+.filter-catalog__item-level1--active>a::after{
+    content: '-';
+}
+
+.filter-catalog__item-outer-lev2{
+    display: none;
+}
+
+.filter-catalog__item-level1--active .filter-catalog__item-outer-lev2{
+    display: block;
 }
 
 /* end sidebar */

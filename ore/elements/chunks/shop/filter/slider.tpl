@@ -13,13 +13,15 @@
         </div>
     </div>
 </fieldset>
-                
+{if $_modx->resource.parent!=0}
+    {var $class = ' active'}
+{/if}
 <fieldset class="widget">
     <div class="collapse">
         <div class="collapse-header clicked">
             {'lw.catalog'|lexicon} <i class="icon-angel-down"></i>
         </div>
-        <div class="collapse-panel filter-catalog">
+        <div class="collapse-panel filter-catalog{$class}">
             {$_modx->runSnippet('pdoMenu',[
                 'parents' => 2,
                 'resources' => '-12,-30,-31',
@@ -34,6 +36,10 @@
                     }',
                 'select' => '{ "localizator" : "modResource.*, localizator.*, modResource.id" }',
                 'where' => '{ "localizator.key" : "' ~ ('localizator_key' | option) ~ '"}',
+                'tplOuter' => '@FILE:chunks/shop/filter/catalogMenu.outer.tpl',
+                'tplInner' => '@FILE:chunks/shop/filter/catalogMenu.outer.lev2.tpl',
+                'tpl' => '@FILE:chunks/shop/filter/catalogMenu.lev1.row.tpl',
+                'tplInnerRow' => '@FILE:chunks/shop/filter/catalogMenu.lev2.row.tpl',
             ])}
         </div>
     </div>

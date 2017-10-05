@@ -29,7 +29,7 @@
                     'resources' => '-29'
                 ])}
                 <ul class="menu-contacts">
-                    <li><a href="tel:89558965636">8 (955) 896-56--36</a>
+                    <li><a href="tel:{$_modx->config.sitePhone}">{$_modx->config.sitePhone}</a>
                     </li>
                     <li><a href="#" data-popup="open" data-popup-id="#popup">{'lw.call-me'|lexicon}</a>
                     </li>
@@ -59,19 +59,19 @@
             <!-- logo -->
             <a href="./" class="logo">
                 {*<img src="assets/templates/default/images/logo_h.png" alt="logo">*}
-                {*<img src="assets/templates/default/images/off50.jpg" alt="logo"> *}
-                <span class="logo-text">
+                <img src="assets/templates/default/images/logo-fin.png" alt="logo">
+                {*<span class="logo-text">
                     <span class="logo-text__title">TOPOFSALE.RU</span>
-                    {*<span class="logo-text__desc">{'lw.description'|lexicon}</span>*}
-                </span>
+                    {*<span class="logo-text__desc">{'lw.description'|lexicon}</span>
+                </span>*}
             </a>
             <!-- info -->
             <div class="header-info">
                 <!-- contacts -->
                 <div class="header-info-contacts">
                     <a href="tel:{$_modx->config.sitePhone}" class="link-phone">
-                        <i class="fa fa-phone"></i> 
-                        {$_modx->config.sitePhone}</a>
+                        <img src="{$_modx->config.assets_url}templates/default/images/fone.png" alt="">
+                    </a>
                         {*<div class="info-value">
                         <span class="info-value__dollars">$ {$_modx->getPlaceholder('+USD')|number: 2 : '.' : ' '+(0.4)}</span>
                         <span class="info-value__euro">€ {$_modx->getPlaceholder('+EUR')|number: 2 : '.' : ' '+(0.4)}</span>

@@ -55,6 +55,8 @@
                 </div>
             {/foreach}
             <div class="form-group">
+                <p>{'lw.politics-disclaimer'|lexicon}</p>
+                <p><a href="{'29'|url}">{'lw.politics-link'|lexicon}</a></p>
                 <button type="submit" class="btn btn_form" name="ms2_action" value="order/submit">{'lw.send-order'|lexicon}</button>
             </div>
         </div>

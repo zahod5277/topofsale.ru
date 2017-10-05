@@ -13211,8 +13211,12 @@ var widgetsSlider = $.widget( "ui.slider", $.ui.mouse, {
 
 		$(this).addClass('tab-link_active');
 		$("#"+tab_id).addClass('tab-pane_active');
-	})
-
+	});
+        /* CATALOG FILTER DROPDOWN */
+        $('.filter-catalog__item-level1>a').on('click', function(e){
+            e.preventDefault();
+            $(this).parents('.filter-catalog__item-level1').toggleClass('filter-catalog__item-level1--active');
+        });
 
 })(jQuery);
 

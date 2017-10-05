@@ -17,7 +17,7 @@
                     'resource_id' => $category,
                     'key' => ('cultureKey'|option)
                 ])}
-                <h1 class="product-info__title">{$categoryTitle} {$_modx->resource.pagetitle}</h1>
+                <h1 class="product-info__title">{$_modx->resource.pagetitle}</h1>
                 <!-- price -->
                 {*Просчет в другой валюте временно отключен*}
                 <div class="product-price">
@@ -45,6 +45,7 @@
                              sex,
                              body_material,
                              clockwork,
+                             calibr,
                              strap_color,
                              forma,
                              dial_color,
@@ -55,7 +56,8 @@
                              water_resist,
                              backcap,
                              power_reserve,
-                             limited'
+                             limited,
+                             complect'
                     }
                     <div class="table table-responsive">
                         <table class="table table-striped table-characteristics">
@@ -68,6 +70,7 @@
                 </div>
             </div>
         </div>
+       {$_modx->resource.content}
     </div>
 </main>
 {'!addLooked'|snippet:[

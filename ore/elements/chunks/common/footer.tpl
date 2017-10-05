@@ -17,7 +17,7 @@
                     {$_modx->runSnippet('!pdoMenu',[
                     'level' => 1,
                     'parents' => 2,
-                    'resources' => '12,30,31',
+                    'resources' => '710,715,713,714,625,5',
                     'tplOuter' => '@INLINE {$wrapper}',
                     'tpl' => '@FILE:chunks/common/mainMenuRow.tpl',
                     'leftJoin' => '{
@@ -37,7 +37,8 @@
                     {$_modx->runSnippet('!pdoMenu',[
                     'level' => 1,
                     'parents' => 6,
-                    'resources' => '29,8,9',
+                    'resources' => '9,28,29,911',
+                    'showHidden' => 1,
                     'tplOuter' => '@INLINE {$wrapper}',
                     'tpl' => '@FILE:chunks/common/mainMenuRow.tpl',
                     'leftJoin' => '{

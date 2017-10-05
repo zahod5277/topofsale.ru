@@ -19,7 +19,7 @@
         </form>
         <footer class="popup-footer">
             <p>{'lw.politics-disclaimer'|lexicon}</p>
-            <p><a href="#">{'lw.politics-link'|lexicon}</a>
+            <p><a href="{'29'|url}">{'lw.politics-link'|lexicon}</a>
             </p>
         </footer>
     </div>
