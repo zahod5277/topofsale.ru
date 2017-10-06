@@ -3273,12 +3273,16 @@ body.home .header-bottom .container{
     content: '-';
 }
 
-.filter-catalog__item-outer-lev2{
+.filter-catalog__item-level1>.filter-catalog__item-outer{
     display: none;
 }
 
-.filter-catalog__item-level1--active .filter-catalog__item-outer-lev2{
+.filter-catalog__item-level1--active>.filter-catalog__item-outer{
     display: block;
+}
+
+.filter-catalog__item-level2{
+    padding-right: 0px!important;
 }
 
 /* end sidebar */
@@ -6156,11 +6160,26 @@ sup.warning{
   .menu.open{
     transition: all .5s ease;
     -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
 
+  .menu.open .menu-list a{
+    line-height: 30px;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
   .menu-list{
-    padding-top: 50px;
+    padding: 80px 30px 20px 30px;
+  }
+  
+  .menu.open .menu-contacts{
+      padding-left: 50px;
+      list-style: none;
+  }
+  
+  .menu.open .menu-contacts a{
+      color: black;
   }
 
   .menu-list li{
@@ -6619,7 +6638,7 @@ sup.warning{
 
 @media only screen and (max-width: 480px){
   .form.form_search{
-    width: 190px;
+    width: 175px;
   }
 
   .line-filter .btn{
@@ -6644,8 +6663,9 @@ sup.warning{
   }
 
   .menu-contacts{
-    padding-left: 20px;
-    padding-top: 40px;
+    padding-left: 30px;
+    list-style: none;
+    padding-top: 20px;
   }
 
   .menu-contacts li:not(:last-child){

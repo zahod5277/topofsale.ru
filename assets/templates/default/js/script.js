@@ -53,7 +53,6 @@ var App = {
                     max = $('.formCost').find('.max-range').text(),
             from = $(this).parent().find('.min').val() ? $(this).parent().find('.min').val() : min, 
             to = $(this).parent().find('.max').val() ? $(this).parent().find('.max').val() : max;
-            console.log(min+'----'+max+'---'+from+'---'+to);
             $exRange.ionRangeSlider({
                 type: "double",
                 grid: false,

@@ -1,3 +1,12 @@
+{var $category = $_modx->runSnippet('!pdoField',[
+    'field' => 'id',
+    'top' => 1,
+])}
+{var $categoryTitle = $_modx->runSnippet('@FILE:snippets/localizatorField.php',[
+    'field' => 'pagetitle',
+    'resource_id' => $category,
+    'key' => ('cultureKey'|option)
+])}
 <main class="content">
     <div class="container">
         <!-- product -->
@@ -8,15 +17,6 @@
             ])}
             <!-- info -->
             <div class="product-info">
-                {var $category = $_modx->runSnippet('!pdoField',[
-                    'field' => 'id',
-                    'top' => 1,
-                ])}
-                {var $categoryTitle = $_modx->runSnippet('@FILE:snippets/localizatorField.php',[
-                    'field' => 'pagetitle',
-                    'resource_id' => $category,
-                    'key' => ('cultureKey'|option)
-                ])}
                 <h1 class="product-info__title">{$_modx->resource.pagetitle}</h1>
                 <!-- price -->
                 {*Просчет в другой валюте временно отключен*}

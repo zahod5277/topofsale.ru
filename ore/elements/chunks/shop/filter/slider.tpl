@@ -37,9 +37,7 @@
                 'select' => '{ "localizator" : "modResource.*, localizator.*, modResource.id" }',
                 'where' => '{ "localizator.key" : "' ~ ('localizator_key' | option) ~ '"}',
                 'tplOuter' => '@FILE:chunks/shop/filter/catalogMenu.outer.tpl',
-                'tplInner' => '@FILE:chunks/shop/filter/catalogMenu.outer.lev2.tpl',
                 'tpl' => '@FILE:chunks/shop/filter/catalogMenu.lev1.row.tpl',
-                'tplInnerRow' => '@FILE:chunks/shop/filter/catalogMenu.lev2.row.tpl',
             ])}
         </div>
     </div>

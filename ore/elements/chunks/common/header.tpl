@@ -31,7 +31,8 @@
                 <ul class="menu-contacts">
                     <li><a href="tel:{$_modx->config.sitePhone}">{$_modx->config.sitePhone}</a>
                     </li>
-                    <li><a href="#" data-popup="open" data-popup-id="#popup">{'lw.call-me'|lexicon}</a>
+                    <li>
+                        <a href="#" data-popup="open" data-popup-id="#popup">{'lw.call-me'|lexicon}</a>
                     </li>
                 </ul>
             </nav>

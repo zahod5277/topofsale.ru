@@ -154,12 +154,16 @@
     content: '-';
 }
 
-.filter-catalog__item-outer-lev2{
+.filter-catalog__item-level1>.filter-catalog__item-outer{
     display: none;
 }
 
-.filter-catalog__item-level1--active .filter-catalog__item-outer-lev2{
+.filter-catalog__item-level1--active>.filter-catalog__item-outer{
     display: block;
+}
+
+.filter-catalog__item-level2{
+    padding-right: 0px!important;
 }
 
 /* end sidebar */
