@@ -1,9 +1,10 @@
+{var $timestamp = ''|date_format:'%s'}
 <!-- jquery -->
 <script src="assets/templates/default/js/jquery.min.js"></script>
 <!-- app -->
 <script src="assets/templates/default/js/app.js"></script>
 <script src="assets/templates/default/js/ion.rangeSlider.min.js"></script>
-<script src="assets/templates/default/js/script.js"></script>
+<script src="assets/templates/default/js/script.js?{$timestamp}"></script>
 {ignore}
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >

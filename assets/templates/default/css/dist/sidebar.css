@@ -86,7 +86,7 @@
   font-weight: 400;
   line-height: 34px;
   color: #634426;
-  width: 100%;
+  width: 110%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,8 +103,7 @@
 
 .formCost input{
   display: inline-block;
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 34px;
   color: #634426;
