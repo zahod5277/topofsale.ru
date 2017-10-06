@@ -23,7 +23,9 @@ gulp.task('css', function(){
         templatePath + 'css/dist/card-item.css',
         templatePath + 'css/dist/card.css',
         templatePath + 'css/dist/form.css',
-        templatePath + 'css/dist/media.css'
+        templatePath + 'css/dist/media.css',
+        templatePath + 'css/dist/ion.rangeSlider.css',
+        templatePath + 'css/dist/ion.rangeSlider.skinHTML5.css',
     ])
         .pipe(concat('app.min.css')) // Собираем их в кучу в новом файле libs.min.js
         //.pipe(cleanCSS({compatibility: '*'})) // Сжимаем JS файл

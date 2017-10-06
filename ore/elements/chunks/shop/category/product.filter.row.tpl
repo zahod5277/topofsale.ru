@@ -9,7 +9,7 @@
             <img src="{$list}" alt="{$pagetitle}">
         </a>
         <a href="{$linkPrefix}{$uri}" class="card__title">{$pagetitle}</a>
-        <p class="card__text">{$introtext|truncate:50:'...'}</p>
+        <p class="card__text">{$introtext|truncate:100:'...'}</p>
         <!-- footer -->
         <div class="card-footer">
             <div class="card-price">
