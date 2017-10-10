@@ -2,6 +2,7 @@ $(document).ready(function () {
     App.init();
     App.Range();
     App.ionRange();
+    App.catalogFilterDropdown();
 });
 
 var App = {
@@ -71,5 +72,12 @@ var App = {
                 onUpdate: function (data) {}
             });
         });
+    },
+    catalogFilterDropdown: function(){
+        $('.filter-catalog__item-level1>a').on('click', function (e) {
+            e.preventDefault();
+            $(this).parent('li').toggleClass('filter-catalog__item-level1--active');
+        });
+        $('.filter-catalog__item-level1 .active').parents('.filter-catalog__item-level1').addClass('filter-catalog__item-level1--active');
     }
 };

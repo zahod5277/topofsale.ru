@@ -4,6 +4,12 @@
 
 /* VIEW */
 
+.back-to-catalog a{
+    padding: 0px 20px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
 .product{
     margin-top: 20px;
 }

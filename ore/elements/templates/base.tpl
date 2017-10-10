@@ -7,6 +7,7 @@
         {var $class=' class="home"'}
     {/if}
     <body{$class}>
+        {include 'file:chunks/common/googlegtmBody.tpl'}
         {block 'HEADER'}
             {include 'file:chunks/common/header.tpl'}
         {/block}

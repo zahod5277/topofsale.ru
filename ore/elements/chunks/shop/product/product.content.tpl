@@ -11,6 +11,9 @@
     <div class="container">
         <!-- product -->
         <div class="product clearfix">
+            <div class="back-to-catalog">
+                <a class="btn" href="{$_modx->resource.parent|url}"><i class="fa fa-arrow-left" aria-hidden="true"></i> Назад в каталог</a>
+            </div>
             {$_modx->runSnippet('!msGallery',[
                 'tpl' => '@FILE:chunks/shop/product/gallery.tpl',
                 'includeThumbs' => 'card'

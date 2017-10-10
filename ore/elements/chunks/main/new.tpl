@@ -10,7 +10,7 @@
         {$_modx->runSnippet('!pdoPage',[
             'element' => 'msProducts',
             'parents' => 2,
-            'sortby' => 'createdon',
+            'sortby' => 'publishedon',
             'sortdir' => 'DESC',
             'includeThumbs' => 'list',
             'leftJoin' => '{

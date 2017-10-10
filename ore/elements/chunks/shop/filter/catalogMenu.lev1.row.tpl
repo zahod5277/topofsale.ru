@@ -4,6 +4,6 @@
     {var $class = 'filter-catalog__item-level2'}
 {/if}
 <li class="{$class}">
-     <a href="{$link}">{$menutitle}</a>
+     <a href="{$link}" {$classes}>{$menutitle}</a>
      {$wrapper}
  </li>

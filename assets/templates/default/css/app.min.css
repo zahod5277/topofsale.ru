@@ -2847,6 +2847,12 @@ body.home .header-bottom .container{
 
 /* VIEW */
 
+.back-to-catalog a{
+    padding: 0px 20px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
 .product{
     margin-top: 20px;
 }
@@ -5556,6 +5562,8 @@ li.fancybox-thumbs-loading{
 
 .goToOrderBtn{
     text-align: right;
+    display: flex;
+    padding: 0px;
 }
 
 .card:hover{

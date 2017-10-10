@@ -17,6 +17,8 @@
 
 .goToOrderBtn{
     text-align: right;
+    display: flex;
+    padding: 0px;
 }
 
 .card:hover{

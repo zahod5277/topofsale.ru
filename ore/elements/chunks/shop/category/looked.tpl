@@ -1,5 +1,6 @@
 {$_modx->runSnippet('!looked',[
     'tpl' => '@FILE:chunks/shop/category/product.row.tpl',
+    'tplOuter' => '@FILE:chunks/shop/category/looked.outer.tpl',
     'limit' => 4,
     'includeThumbs' => 'list',
     'leftJoin' => '{
