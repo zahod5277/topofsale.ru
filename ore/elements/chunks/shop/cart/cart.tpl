@@ -4,7 +4,6 @@
     .breadcrumbs {display: none;}
 </style>
 {/ignore}
-
 {if !count($products)}
     {'ms2_cart_is_empty' | lexicon}
 {else}

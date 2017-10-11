@@ -8,6 +8,9 @@
                     <div class="wrap-radio">
                         <input class="radio-input" type="radio" name="payment" value="{$payment.id}" id="payment_{$payment.id}"{$payment.id == $order.payment ? 'checked' : ''}>
                         <label class="payment radio-label" for="payment_{$payment.id}">
+                            {if $payment.logo?}
+                                {$payment.logo}
+                            {/if}
                             {('lw.payment-'~$payment.id)|lexicon}
                         </label>
                     </div>
@@ -24,6 +27,9 @@
                                data-payments="{$delivery.payments | json_encode}"
                                {$checked ? 'checked' : ''}>
                         <label class="delivery radio-label" for="delivery_{$delivery.id}">
+                            {if $delivery.logo?}
+                                {$delivery.logo}
+                            {/if}
                             {('lw.delivery-'~$delivery.id)|lexicon}
                         </label>
                     </div>

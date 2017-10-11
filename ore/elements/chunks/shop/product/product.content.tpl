@@ -73,7 +73,7 @@
                 </div>
             </div>
         </div>
-       {$_modx->resource.content}
+       {$_modx->resource.localizator_content}
     </div>
 </main>
 {'!addLooked'|snippet:[

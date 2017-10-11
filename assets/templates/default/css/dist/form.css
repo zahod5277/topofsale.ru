@@ -9,6 +9,10 @@
 
 .form-group{
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .form-group:not(:last-child){
@@ -175,10 +179,12 @@ sup.warning{
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 20px;
+  flex:0 0 100%;
 }
 
 .form_order .wrap-radio{
     margin-bottom: 10px;
+    flex: 0 0 50%;
 }
 
 /* SEARCH */
