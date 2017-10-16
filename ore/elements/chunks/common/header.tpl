@@ -58,14 +58,15 @@
     <div class="header-bottom">
         <div class="container">
             <!-- logo -->
-            <a href="./" class="logo">
-                {*<img src="assets/templates/default/images/logo_h.png" alt="logo">*}
-                <img src="assets/templates/default/images/logo-fin.png" alt="logo">
-                {*<span class="logo-text">
-                    <span class="logo-text__title">TOPOFSALE.RU</span>
-                    {*<span class="logo-text__desc">{'lw.description'|lexicon}</span>
-                </span>*}
+            {if ('localizator_key' | option)!='ru'}
+            <a href="{$_modx->config.site_url}en/" class="logo">
+                <img src="assets/templates/default/images/logo-fin-eng.png" alt="logo">
             </a>
+            {else}
+            <a href="{$_modx->config.site_url}" class="logo">
+                <img src="assets/templates/default/images/logo-fin.png" alt="logo">
+            </a>
+            {/if}
             <!-- info -->
             <div class="header-info">
                 <!-- contacts -->
@@ -73,10 +74,6 @@
                     <a href="tel:{$_modx->config.sitePhone}" class="link-phone">
                         <img src="{$_modx->config.assets_url}templates/default/images/fone.png" alt="">
                     </a>
-                        {*<div class="info-value">
-                        <span class="info-value__dollars">$ {$_modx->getPlaceholder('+USD')|number: 2 : '.' : ' '+(0.4)}</span>
-                        <span class="info-value__euro">€ {$_modx->getPlaceholder('+EUR')|number: 2 : '.' : ' '+(0.4)}</span>
-                        </div>*}
                     <span class="header__social-links">
                         <a href="#" class="header__social-links-item">
                             <i class="fa fa-vk" aria-hidden="true"></i>
@@ -95,10 +92,6 @@
                     <!-- value -->
                 </div>
                 <!-- address -->
-{*                <div class="header-info-address">
-                    <span><i class="fa fa-clock-o"></i> 9.00 - 21.00</span>
-                    <span>{'lw.header-adress'|lexicon}</span>
-                </div>*}
             </div>
         </div>
     </div>
