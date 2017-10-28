@@ -5,6 +5,30 @@
 <div class="col-sm-6 col-lg-3">
     <!-- card -->
     <div class="card">
+         {if (($sale)||($favorite)||($new)||($popular))}
+            <div class="product-icon__outer">
+                {if $sale==1}
+                    <i class="product-icon product-icon--sale">
+                        <span class="product-icon__tooltip">Распродажа</span>
+                    </i>
+                {/if}
+                {if $new==1}
+                    <i class="product-icon product-icon--new">
+                        <span class="product-icon__tooltip">Новинка!</span>
+                    </i>
+                {/if}
+                {if $popular==1}
+                    <i class="product-icon product-icon--popular">
+                        <span class="product-icon__tooltip">TOP продаж</span>
+                    </i>
+                {/if}
+                {if $favorite==1}
+                    <i class="product-icon product-icon--favorite">
+                        <span class="product-icon__tooltip">Подарок за покупку!</span>
+                    </i>
+                {/if}
+            </div>
+        {/if}
         <a href="{$linkPrefix}{$uri}" class="card-image">
             <img src="{$list}" alt="{$pagetitle}">
         </a>

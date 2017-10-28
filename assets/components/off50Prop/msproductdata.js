@@ -51,7 +51,7 @@ Ext.extend(miniShop2.combo.ProductStat,MODx.combo.ComboBox);
 Ext.reg('minishop2-combo-product-stat',miniShop2.combo.ProductStat);
 //plugin
 miniShop2.plugin.off50Prop = {
-    getFields: function () {
+    getFields: function (config) {
         return {
             body_diameter: {
                 xtype: 'textfield',
@@ -144,6 +144,12 @@ miniShop2.plugin.off50Prop = {
             jewerl_count: {
                 xtype: 'textfield',
                 description: '<b>[[+jewerl_count]]</b><br />' + _('ms2_product_jewerl_count_help')
+            },
+            sale: {
+                xtype: 'xcheckbox',
+                inputValue: 1,
+                checked: parseInt(config.record.sale|| 1),
+                description: '<b>[[+sale]]</b><br />' + _('ms2_product_sale_help')
             }
         };
     },
@@ -263,6 +269,11 @@ miniShop2.plugin.off50Prop = {
                 width: 50,
                 sortable: false,
                 editor: {xtype: 'textfield', name: 'jewerl_count'}
+            },
+            sale: {
+                width: 50,
+                sortable: false,
+                editor: {xtype:'combo-boolean', renderer:'boolean', name: 'sale'}
             }
         };
     }

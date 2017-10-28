@@ -24,7 +24,8 @@ return array(
         'body_comment' => NULL,
         'strap_comment' => NULL,
         'backcap' => NULL,
-        'jewerl_count' => NULL
+        'jewerl_count' => NULL,
+        'sale' => NULL,
     ),
     'fieldMeta' => array(
         'complect' => array(
@@ -179,11 +180,19 @@ return array(
             , 'default' => NULL
         ),
         'jewerl_count' => array(
-              'dbtype' => 'varchar'
+            'dbtype' => 'varchar'
             , 'precision' => 255
             , 'phptype' => 'string'
             , 'null' => true
             , 'default' => NULL
+        ),
+        'sale' => array(
+            'dbtype' => 'tinyint',
+            'precision' => '1',
+            'attributes' => 'unsigned',
+            'phptype' => 'boolean',
+            'null' => true,
+            'default' => 0,
         )
     ),
     'indexes' => array(
@@ -485,6 +494,19 @@ return array(
                     , 'null' => false
                 )
             )
+        ),
+        'sale' => array(
+            'alias' => 'sale',
+            'primary' => false,
+            'unique' => false,
+            'type' => 'BTREE',
+            'columns' => array(
+                'sale' => array(
+                    'length' => '',
+                    'collation' => 'A',
+                    'null' => false,
+                ),
+            ),
         )
     )
 );

@@ -18,6 +18,8 @@ gulp.task('css', function(){
         templatePath + 'css/dist/mainslider.css',
         templatePath + 'css/dist/modal.css',
         templatePath + 'css/dist/product.css',
+        templatePath + 'css/dist/news.css',
+        templatePath + 'css/dist/product-icon.css',
         templatePath + 'css/dist/sidebar.css',
         templatePath + 'css/dist/app.css',
         templatePath + 'css/dist/card-item.css',

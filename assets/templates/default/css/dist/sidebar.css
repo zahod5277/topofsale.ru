@@ -150,6 +150,12 @@
     top: 3px;
 }
 
+.filter-catalog__item-level1--active a.active{
+    font-weight: bold;
+}
+
+.filter-catalog__item-level1--active 
+
 .filter-catalog__item-level1--active>a::after{
     content: '-';
 }

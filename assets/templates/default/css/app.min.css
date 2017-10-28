@@ -3123,6 +3123,67 @@ body.home .header-bottom .container{
 }
 
 /* end product */
+.news__item-text{
+    font-size: 16px!important;
+}
+
+.news__item-title a{
+    color:black;
+    font-size:18px
+}
+.product-icon__outer{
+    position: absolute;
+}
+
+.product-icon{
+    display: inline-block;
+    min-height: 70px;
+    width: 40px;
+    background-repeat: no-repeat;
+}
+
+.product-icon--favorite{
+    background-image: url('../images/present-2s.png');
+    position: absolute;
+    right: -55px;
+    top: -5px;  
+}
+
+.product-icon--new{
+    background-image: url('../images/new-s.png');
+}
+
+.product-icon--popular{
+    background-image: url('../images/top-1s.png');
+}
+
+.product-icon--sale{
+    background-image: url('../images/sale-s.png');
+}
+
+.product-icon__tooltip{
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: -20%;
+    left: 50%;
+    margin-left: -60px;
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.product-icon:hover .product-icon__tooltip{
+    visibility: visible;
+    opacity: 1;
+}
 /* ==========================================================================
 	 SIDEBAR
  ===========================================================================*/
@@ -3274,6 +3335,12 @@ body.home .header-bottom .container{
     position: relative;
     top: 3px;
 }
+
+.filter-catalog__item-level1--active a.active{
+    font-weight: bold;
+}
+
+.filter-catalog__item-level1--active 
 
 .filter-catalog__item-level1--active>a::after{
     content: '-';
