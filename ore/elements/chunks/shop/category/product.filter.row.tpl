@@ -36,7 +36,7 @@
             </div>
         {/if}
         <a href="{$linkPrefix}{$uri}" class="card-image">
-            <img src="{$list}" alt="{$pagetitle}">
+            <img src="{$list}" alt="{$pagetitle}" title="{$pagetitle} в topofsale.ru" width="207" height="200">
         </a>
         <a href="{$linkPrefix}{$uri}" class="card__title">{$pagetitle}</a>
         <p class="card__text">{$introtext|truncate:100:'...'}</p>

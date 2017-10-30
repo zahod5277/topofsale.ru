@@ -13187,7 +13187,7 @@
         arrows: false,
         dots: true
     });
-
+    
     /* TABS */
 
     $('.tabs li').click(function () {

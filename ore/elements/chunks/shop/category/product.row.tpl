@@ -5,32 +5,32 @@
 <div class="col-sm-6 col-lg-3">
     <!-- card -->
     <div class="card">
-         {if (($sale)||($favorite)||($new)||($popular))}
+        {if (($sale)||($favorite)||($new)||($popular))}
             <div class="product-icon__outer">
                 {if $sale==1}
                     <i class="product-icon product-icon--sale">
-                        <span class="product-icon__tooltip">Распродажа</span>
+                        <span class="product-icon__tooltip">{'lw.sale'|lexicon}</span>
                     </i>
                 {/if}
                 {if $new==1}
                     <i class="product-icon product-icon--new">
-                        <span class="product-icon__tooltip">Новинка!</span>
+                        <span class="product-icon__tooltip">{'lw.new'|lexicon}</span>
                     </i>
                 {/if}
                 {if $popular==1}
                     <i class="product-icon product-icon--popular">
-                        <span class="product-icon__tooltip">TOP продаж</span>
+                        <span class="product-icon__tooltip">{'lw.top'|lexicon}</span>
                     </i>
                 {/if}
                 {if $favorite==1}
                     <i class="product-icon product-icon--favorite">
-                        <span class="product-icon__tooltip">Подарок за покупку!</span>
+                        <span class="product-icon__tooltip">{'lw.gift'|lexicon}</span>
                     </i>
                 {/if}
             </div>
         {/if}
         <a href="{$linkPrefix}{$uri}" class="card-image">
-            <img src="{$list}" alt="{$pagetitle}">
+            <img src="{$list}" alt="{$pagetitle}" title="{$pagetitle} в topofsale.ru" width="207" height="200">
         </a>
         <a href="{$linkPrefix}{$uri}" class="card__title">{$pagetitle}</a>
         <!-- <p class="card__text">{$introtext|truncate:100:'...'}</p> -->

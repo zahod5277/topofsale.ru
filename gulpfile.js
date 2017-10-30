@@ -28,8 +28,8 @@ gulp.task('css', function(){
         templatePath + 'css/dist/media.css',
         templatePath + 'css/dist/ion.rangeSlider.css',
         templatePath + 'css/dist/ion.rangeSlider.skinHTML5.css',
+        templatePath + 'css/dist/schemaorg.css',
         templatePath + 'css/font-awesome.min.css',
-        templatePath + 'css/schemaorg.css',
         templatePath + 'css/fa-viber.css',
         '/assets/components/minishop2/css/web/default.css'
     ])

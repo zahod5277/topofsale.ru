@@ -5,16 +5,19 @@
         <div class="footer-info-contacts">
         </div>
         <!-- address -->
-        <div class="footer-address footer-info-contacts">
-            <a href="tel:{$_modx->config.sitePhone}" class="link-phone"><i class="icon icon-call-answer-secondary"></i> {$_modx->config.sitePhone}</a>
+        <div class="footer-address footer-info-contacts" itemscope itemtype="http://schema.org/Organization" >
+            <a href="tel:{$_modx->config.sitePhone}" class="link-phone"><i class="icon icon-call-answer-secondary"></i> <span itemprop="telephone">{$_modx->config.sitePhone}</span></a>
             <a href="#" data-popup="open" data-popup-id="#popup" class="more">{'lw.call-me'|lexicon}</a>
-            <div itemscope itemtype="http://schema.org/Organization" class="schemaOrg schemaOrg__organization">
-                <a itemprop="url" href="https://topofsale.ru/"><div itemprop="name"><strong>Наручные часы | Карманные часы | Интерьерные часы | topofsale.ru</strong></div></a>
-                <div itemprop="description">Интернет-магазин статусных предметов, где собрано все самое популярное!</div>
+            <div class="schemaOrg schemaOrg__organization">
+                <a itemprop="url" href="https://topofsale.ru/">
+                    <div itemprop="name">
+                        <strong>{'lw.schemaDescription'|lexicon}</strong>
+                    </div>
+                </a>
+                <div itemprop="description">{'lw.schemaSecondDescription'|lexicon}</div>
                 <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <span itemprop="telephone">+79852279712</span>
-                    <span itemprop="streetAddress">Нижний Кисловский пер., 7, стр. 1</span>
-                    <span itemprop="addressLocality">Москва</span>
+                    <span itemprop="streetAddress">{'lw.header-adress'|lexicon}</span>
+                    <span itemprop="addressLocality">{'lw.city'|lexicon}</span>
                     <span itemprop="name">TOPOFSALE.RU</span></div>
             </div>
         </div>
