@@ -1,10 +1,5 @@
 {var $timestamp = ''|date_format:'%s'}
-<!-- jquery -->
-<script src="assets/templates/default/js/jquery.min.js"></script>
-<!-- app -->
-<script src="assets/templates/default/js/app.js?{$timestamp}"></script>
-<script src="assets/templates/default/js/ion.rangeSlider.min.js"></script>
-<script src="assets/templates/default/js/script.js?{$timestamp}"></script>
+<script src="assets/templates/default/js/app.min.js"></script>
 {ignore}
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
@@ -21,7 +16,6 @@
                 });
             } catch(e) { }
         });
-
         var n = d.getElementsByTagName("script")[0],
             s = d.createElement("script"),
             f = function () { n.parentNode.insertBefore(s, n); };

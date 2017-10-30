@@ -5,4 +5,4 @@
 {/if}
 <label for="mse2_{$table}{$delimeter}{$filter}_{$idx}">{$title}</label>
 <input type="text" name="{$filter_key}" id="mse2_{$table}{$delimeter}{$filter}_{$idx}" value="{$value}" class="{$class}">
-<span style="display: none" class="hidden {$class}-range">{$value}</span>
+<span style="display: none" class="hidden {$class}-range">{$value|number:0:'':''}</span>

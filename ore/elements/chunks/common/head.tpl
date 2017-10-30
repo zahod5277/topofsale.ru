@@ -35,13 +35,11 @@
     <meta name="theme-color" content="#ffffff">
     <!--viewport-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&amp;subset=cyrillic" rel="stylesheet">
     <!--modernizr-->
-    <script src="assets/templates/default/js/modernizr-custom.js"></script>
+    <script src="assets/templates/default/js/modernizr-custom.min.js"></script>
     <!--styles-->
     {var $timestamp = ''|date_format:'%s'}
     <link rel="stylesheet" type="text/css" href="assets/templates/default/css/app.min.css?{$timestamp}" />
-    <link rel="stylesheet" type="text/css" href="assets/templates/default/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="assets/templates/default/css/fa-viber.css" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 </head>

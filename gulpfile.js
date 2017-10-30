@@ -28,10 +28,26 @@ gulp.task('css', function(){
         templatePath + 'css/dist/media.css',
         templatePath + 'css/dist/ion.rangeSlider.css',
         templatePath + 'css/dist/ion.rangeSlider.skinHTML5.css',
+        templatePath + 'css/font-awesome.min.css',
+        templatePath + 'css/schemaorg.css',
+        templatePath + 'css/fa-viber.css',
+        '/assets/components/minishop2/css/web/default.css'
     ])
         .pipe(concat('app.min.css')) // Собираем их в кучу в новом файле libs.min.js
-        //.pipe(cleanCSS({compatibility: '*'})) // Сжимаем JS файл
+        .pipe(cleanCSS({compatibility: '*'})) // Сжимаем JS файл
         .pipe(gulp.dest(templatePath + 'css/')); // Выгружаем в папку app/js 
 });
 
-gulp.task('build', ['css']);
+gulp.task('scripts', function() {
+    return gulp.src([ // Берем все необходимые библиотеки
+        templatePath + 'js/jquery.min.js',
+        templatePath + 'js/app.js',
+        templatePath + 'js/ion.rangeSlider.min.js',
+        templatePath + 'js/script.js'
+        ])
+        .pipe(concat('app.min.js')) // Собираем их в кучу в новом файле libs.min.js
+        .pipe(uglify()) // Сжимаем JS файл
+        .pipe(gulp.dest(templatePath + 'js/'));
+});
+
+gulp.task('build', ['css', 'scripts']);

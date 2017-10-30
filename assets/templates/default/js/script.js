@@ -3,6 +3,7 @@ $(document).ready(function () {
     App.Range();
     App.ionRange();
     App.catalogFilterDropdown();
+    App.adressTitleChanger();
 });
 
 var App = {
@@ -12,6 +13,9 @@ var App = {
             var productName = jQuery(this).parents('.ms2_form').find('input[name="pagetitle"]').val();
             jQuery('#order .popup__title').html('Заказ ' + productName);
             jQuery('#order [name="product"]').val(productName);
+        });
+        $('.radio-input[name="delivery"]').on('change', function(){
+            App.adressTitleChanger();
         });
     },
     Range: function () {
@@ -79,5 +83,14 @@ var App = {
             $(this).parent('li').toggleClass('filter-catalog__item-level1--active');
         });
         $('.filter-catalog__item-level1 .active').parents('.filter-catalog__item-level1').addClass('filter-catalog__item-level1--active');
+    },
+    adressTitleChanger: function(){
+        if ($('.radio-input[name="delivery"]:checked').val()=='1'){
+            $('.form__title--delivery-hidden').html($('.radio-input[name="delivery"]:checked').parents('.wrap-radio').find('.delivery__description').text());
+            $('.form__title--delivery').hide();
+        } else {
+            $('.form__title--delivery').show();
+            $('.form__title--delivery-hidden').html('');
+        }
     }
 };

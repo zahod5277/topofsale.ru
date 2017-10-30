@@ -157,9 +157,13 @@
 /* PRICE */
 
 .product-price{
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
   padding-top: 40px;
+  
 }
 
 .product-price::after{
@@ -202,8 +206,6 @@
 .product-price__value{
     position: relative;
     display: block;
-    float: left;
-    width: 30%;
     color: #f6862d;
     font-family: "PT Sans", sans-serif;
     font-size: 38px;
@@ -219,8 +221,6 @@
 }
 
 .product-price__currency{
-  float: right;
-  width: 50%;
   color: #a7713e;
   font-size: 18px;
   font-size: 1.125rem;
@@ -230,12 +230,7 @@
 }
 
 .product-price__currency> span{
-  display: block;
   color: #f6862d;
-}
-
-.product-info-footer{
-  width: 100%;
 }
 
 .product-info-footer .btn{

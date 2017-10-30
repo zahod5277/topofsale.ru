@@ -7,12 +7,19 @@
     'resource_id' => $category,
     'key' => ('cultureKey'|option)
 ])}
+{if ('localizator_key' | option)=='en'}
+    {var $usd = $_modx->runSnippet('@FILE:snippets/CRCalc.php',[
+    'divider' => 'USD',
+    'input' => ($price)
+])}
+{/if}
 <main class="content">
     <div class="container">
         <!-- product -->
         <div class="product clearfix">
             <div class="back-to-catalog">
-                <a class="btn" href="{$_modx->resource.parent|url}"><i class="fa fa-arrow-left" aria-hidden="true"></i> Назад в каталог</a>
+                <a class="btn" href="{$_modx->resource.parent|url}">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i> {'lw.backToCatalog'|lexicon}</a>
             </div>
             {$_modx->runSnippet('!msGallery',[
                 'tpl' => '@FILE:chunks/shop/product/gallery.tpl',
@@ -22,13 +29,25 @@
             <div class="product-info">
                 <h1 class="product-info__title">{$_modx->resource.pagetitle}</h1>
                 <!-- price -->
-                {*Просчет в другой валюте временно отключен*}
                 <div class="product-price">
-                    <div class="product-price__value">{$price|number:0:'.':' '} &#8381;</div>
-                    {if $old_price?}
+                    {if ('localizator_key' | option)=='ru'}
+                        <div class="product-price__value">{$price|number:0:'.':' '} &#8381;</div>
+                        {if $old_price?}
+                            <div class="product-price__value">
+                                <span class="card-price__old card-price__old_product-content">{$old_price|number:0:'.':' '} &#8381;</span>
+                            </div>    
+                        {/if}
+                    {else}
                         <div class="product-price__value">
-                            <span class="card-price__old card-price__old_product-content">{$old_price|number:0:'.':' '} &#8381;</span>
-                        </div>    
+                            <span>
+                                <span class="rub">$</span> 
+                                {$usd|number:0:' ':' '}
+                            </span>
+                        </div>
+                            <div class="product-price__currency">
+                                <span>{$price}</span>
+                                <span><i class="fa fa-rub"></i></span>
+                            </div>
                     {/if}
                     <div class="product-info-footer">
                         <form class="form-horizontal ms2_form" method="post">
@@ -73,7 +92,7 @@
                 </div>
             </div>
         </div>
-       {$_modx->resource.localizator_content}
+        {$_modx->resource.localizator_content}
     </div>
 </main>
 {'!addLooked'|snippet:[

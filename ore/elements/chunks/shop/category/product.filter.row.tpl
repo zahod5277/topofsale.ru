@@ -1,6 +1,12 @@
 {$_modx->lexicon->load(('cultureKey' | option) ~ ':minishop2:default')}
+{var $currencyIco = '<i class="fa fa-rub" aria-hidden="true"></i>'}
 {if ('localizator_key' | option)=='en'}
     {var $linkPrefix='en/'}
+    {var $usd = $_modx->runSnippet('@FILE:snippets/CRCalc.php',[
+    'divider' => 'USD',
+    'input' => ($price)
+    ])}
+    {var $currencyIco = '<i class="fa fa-usd" aria-hidden="true"></i>'}
 {/if}
 <div class="col-sm-6 col-lg-4">
     <!-- card -->
@@ -9,22 +15,22 @@
             <div class="product-icon__outer">
                 {if $sale==1}
                     <i class="product-icon product-icon--sale">
-                        <span class="product-icon__tooltip">Распродажа</span>
+                        <span class="product-icon__tooltip">{'lw.sale'|lexicon}</span>
                     </i>
                 {/if}
                 {if $new==1}
                     <i class="product-icon product-icon--new">
-                        <span class="product-icon__tooltip">Новинка!</span>
+                        <span class="product-icon__tooltip">{'lw.new'|lexicon}</span>
                     </i>
                 {/if}
                 {if $popular==1}
                     <i class="product-icon product-icon--popular">
-                        <span class="product-icon__tooltip">TOP продаж</span>
+                        <span class="product-icon__tooltip">{'lw.top'|lexicon}</span>
                     </i>
                 {/if}
                 {if $favorite==1}
                     <i class="product-icon product-icon--favorite">
-                        <span class="product-icon__tooltip">Подарок за покупку!</span>
+                        <span class="product-icon__tooltip">{'lw.gift'|lexicon}</span>
                     </i>
                 {/if}
             </div>
@@ -37,9 +43,18 @@
         <!-- footer -->
         <div class="card-footer">
             <div class="card-price">
-                <span class="card-price__new">{$price|number:0:'.':' '}</span>
+                {if $usd?}
+                    {var $price = $usd}
+                {/if}
+                <span class="card-price__new">{$price|number:0:'.':' '} {$currencyIco}</span>
                 {if $old_price>0}
-                    <span class="card-price__old">{$old_price|number:0:'.':' '}</span>
+                    {if $usd?}
+                        {var $old_price = $_modx->runSnippet('@FILE:snippets/CRCalc.php',[
+                            'divider' => 'USD',
+                            'input' => ($old_price)
+                        ])}
+                    {/if}
+                    <span class="card-price__old">{$old_price|number:0:'.':' '} {$currencyIco}</span>
                 {/if}
             </div>
             <form method="post" class="ms2_form">
