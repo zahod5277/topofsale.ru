@@ -14,7 +14,7 @@ var App = {
             jQuery('#order .popup__title').html('Заказ ' + productName);
             jQuery('#order [name="product"]').val(productName);
         });
-        $('.radio-input[name="delivery"]').on('change', function(){
+        $('body').on('.radio-input[name="delivery"]', 'change', function(){
             App.adressTitleChanger();
         });
     },
@@ -79,14 +79,15 @@ var App = {
     },
     catalogFilterDropdown: function(){
         $('.filter-catalog__item-level1>a').on('click', function (e) {
-            e.preventDefault();
             $(this).parent('li').toggleClass('filter-catalog__item-level1--active');
         });
         $('.filter-catalog__item-level1 .active').parents('.filter-catalog__item-level1').addClass('filter-catalog__item-level1--active');
     },
     adressTitleChanger: function(){
         if ($('.radio-input[name="delivery"]:checked').val()=='1'){
-            $('.form__title--delivery-hidden').html($('.radio-input[name="delivery"]:checked').parents('.wrap-radio').find('.delivery__description').text());
+            $('.form__title--delivery-hidden').html($('.radio-input[name="delivery"]:checked').parents('.wrap-radio').find('.delivery__description').html()
+                    + '<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa30ec3bdc16535b97e680acefe457d9c017f0823655b0330122c7f7eb8e74720&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>'
+                    );
             $('.form__title--delivery').hide();
         } else {
             $('.form__title--delivery').show();

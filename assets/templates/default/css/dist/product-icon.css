@@ -1,5 +1,6 @@
 .product-icon__outer{
     position: absolute;
+    z-index: 5555;
 }
 
 .product-icon{

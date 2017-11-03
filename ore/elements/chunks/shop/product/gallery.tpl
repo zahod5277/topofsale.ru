@@ -1,5 +1,5 @@
 <div class="product-view" id="msGallery">
-     {if $files?}
+    {if $files?}
         <div class="fotorama"
              data-nav="thumbs"
              data-thumbheight="107"

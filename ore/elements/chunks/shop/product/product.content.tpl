@@ -21,6 +21,30 @@
                 <a class="btn" href="{$_modx->resource.parent|url}">
                     <i class="fa fa-arrow-left" aria-hidden="true"></i> {'lw.backToCatalog'|lexicon}</a>
             </div>
+            {if (($sale)||($favorite)||($new)||($popular))}
+                <div class="product-icon__outer">
+                    {if $sale==1}
+                        <i class="product-icon product-icon--sale">
+                            <span class="product-icon__tooltip">{'lw.sale'|lexicon}</span>
+                        </i>
+                    {/if}
+                    {if $new==1}
+                        <i class="product-icon product-icon--new">
+                            <span class="product-icon__tooltip">{'lw.new'|lexicon}</span>
+                        </i>
+                    {/if}
+                    {if $popular==1}
+                        <i class="product-icon product-icon--popular">
+                            <span class="product-icon__tooltip">{'lw.top'|lexicon}</span>
+                        </i>
+                    {/if}
+                    {if $favorite==1}
+                        <i class="product-icon product-icon--favorite">
+                            <span class="product-icon__tooltip">{'lw.gift'|lexicon}</span>
+                        </i>
+                    {/if}
+                </div>
+            {/if}
             {$_modx->runSnippet('!msGallery',[
                 'tpl' => '@FILE:chunks/shop/product/gallery.tpl',
                 'includeThumbs' => 'card'
@@ -44,10 +68,10 @@
                                 {$usd|number:0:' ':' '}
                             </span>
                         </div>
-                            <div class="product-price__currency">
-                                <span>{$price}</span>
-                                <span><i class="fa fa-rub"></i></span>
-                            </div>
+                        <div class="product-price__currency">
+                            <span>{$price}</span>
+                            <span><i class="fa fa-rub"></i></span>
+                        </div>
                     {/if}
                     <div class="product-info-footer">
                         <form class="form-horizontal ms2_form" method="post">
@@ -78,6 +102,7 @@
                              water_resist,
                              backcap,
                              power_reserve,
+                             functions,
                              limited,
                              complect'
                     }

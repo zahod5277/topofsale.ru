@@ -1,11 +1,11 @@
 {$_modx->runSnippet('!AjaxForm',[
     'snippet' => 'FormIt',
-    'hooks' => 'spam,email,FormItSaveForm,filesender',
+    'hooks' => 'spam,email,FormItSaveForm',
     'emailSubject' => 'Перезвоните мне',
     'emailTo' => $_modx->config.orderMail,
     'emailFrom' => $_modx->config.siteEmail,
     'emailTpl' => 'callme.email.tpl',
-    'emailFromName' => 'Сайт .ru',
+    'emailFromName' => 'Сайт topofsale.ru',
     'validate' => 'name:required,phone:required',
     'validationErrorMessage' => '<p>В форме содержатся ошибки!</p>',
     'successMessage' => '<p>Сообщение успешно отправлено. <br> Мы свяжемся в самое ближайшее время!</p>',
@@ -14,12 +14,12 @@
 
 {$_modx->runSnippet('!AjaxForm',[
     'snippet' => 'FormIt',
-    'hooks' => 'spam,email,FormItSaveForm,filesender',
+    'hooks' => 'spam,email,FormItSaveForm',
     'emailSubject' => 'Нашли дешевле',
     'emailTo' => $_modx->config.orderMail,
     'emailFrom' => $_modx->config.siteEmail,
     'emailTpl' => 'cheaper.email.tpl',
-    'emailFromName' => 'Сайт .ru',
+    'emailFromName' => 'Сайт topofsale.ru',
     'validate' => 'name:required,phone:required',
     'validationErrorMessage' => '<p>В форме содержатся ошибки!</p>',
     'successMessage' => '<p>Сообщение успешно отправлено. <br> Мы свяжемся в самое ближайшее время!</p>',
@@ -28,7 +28,7 @@
 
 {$_modx->runSnippet('!AjaxForm',[
     'snippet' => 'FormIt',
-    'hooks' => 'spam,email,FormItSaveForm,filesender',
+    'hooks' => 'spam,email,FormItSaveFormS',
     'emailSubject' => 'Заказ с сайта TopOfSale.ru',
     'emailTo' => $_modx->config.orderMail,
     'emailFrom' => $_modx->config.siteEmail,

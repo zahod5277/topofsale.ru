@@ -6,15 +6,17 @@
         'id' => $_modx->resource.parent
         ])~' '~$_modx->resource.pagetitle}
         {else}
-            {if $_modx->resource.longtitle?}
-                {var $title = $_modx->resource.longtitle}
+            {if $_modx->resource.seotitle?}
+                {var $title = $_modx->resource.seotitle~'| topofsale.ru'}
             {else}
-                {var $title = $_modx->resource.pagetitle}
+                {var $title = $_modx->resource.pagetitle~'| topofsale.ru'} 
             {/if}
     {/if}
     <title>{$title}</title>
     <meta name="keywords" content="keywords" />
-    <meta name="description" content="description" />
+    {if $_modx->resource.description?}
+    <meta name="description" content="{$_modx->resource.description}" />
+    {/if}
     <base href="{$_modx->config.site_url}">
     <!--favicon-->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/templates/default/favicons//apple-icon-57x57.png">

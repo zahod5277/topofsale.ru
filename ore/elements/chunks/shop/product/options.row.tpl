@@ -5,10 +5,10 @@
             {('ms2_product_' ~ $name) | lexicon}:
             {if ('localizator_key' | option)!='ru'}
                 {var $value = $_modx->runSnippet('@FILE:snippets/translator.php',[
-                'input' => $values[0]
+                'input' => ($values|join)
             ])}
             {else}
-                {var $value = $values[0]}
+                {var $value = ($values|join)}
             {/if}
         </td>
         <td>
