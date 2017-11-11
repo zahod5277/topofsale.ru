@@ -1,3 +1,18 @@
+<div class="card-row">
+{$_modx->runSnippet('!msCart',[
+    'tpl' => '@FILE:chunks/shop/cart/cartOrder.tpl',
+    'includeThumbs' => 'card',
+        'leftJoin' => '{
+        "localizator" : {
+                "class" : "localizatorContent",
+                "alias" : "localizator",
+                "on" : "localizator.resource_id = msProduct.id"
+        }
+    }',
+    'select' => '{ "localizator" : "msProduct.*, localizator.*, msProduct.id" }',
+                    'where' => '{ "localizator.key" : "' ~ ('localizator_key' | option) ~ '"}'
+])}
+</div>
 {$_modx->lexicon->load(('cultureKey' | option) ~ ':minishop2:default')}
 <div class="card-col-12 row">
     <form id="msOrder" method="post" class="form form_order ms2_form">
@@ -56,7 +71,7 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <h3 class="form__title">{'ms2_frontend_credentials' | lexicon}:</h3>
             {foreach ['email','receiver','phone'] as $field}
-                <div class="form-group input-parent">
+                <div class="form-group input-parent required">
                     <input type="text" id="{$field}" placeholder="{('ms2_frontend_' ~ $field) | lexicon}"
                            name="{$field}" value="{$form[$field]}"
                            class="form-input{($field in list $errors) ? ' error' : ''}">

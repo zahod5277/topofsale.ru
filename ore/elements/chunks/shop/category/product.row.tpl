@@ -1,6 +1,12 @@
 {$_modx->lexicon->load(('cultureKey' | option) ~ ':minishop2:default')}
+{var $currencyIco = '<i class="fa fa-rub" aria-hidden="true"></i>'}
 {if ('localizator_key' | option)=='en'}
     {var $linkPrefix='en/'}
+    {var $usd = $_modx->runSnippet('@FILE:snippets/CRCalc.php',[
+    'divider' => 'USD',
+    'input' => ($price)
+    ])}
+    {var $currencyIco = '<i class="fa fa-usd" aria-hidden="true"></i>'}
 {/if}
 <div class="col-sm-6 col-lg-3">
     <!-- card -->
@@ -38,9 +44,9 @@
         <!-- footer -->
         <div class="card-footer">
             <div class="card-price">
-                <span class="card-price__new">{$price|number:0:'.':' '}</span>
+                <span class="card-price__new">{$price|number:0:'.':' '} {$currencyIco}</i></span>
                 {if $old_price>0}
-                    <span class="card-price__old">{$old_price|number:0:'.':' '}</span>
+                    <span class="card-price__old">{$old_price|number:0:'.':' '} {$currencyIco}</span>
                 {/if}
             </div>
             <form method="post" class="ms2_form">

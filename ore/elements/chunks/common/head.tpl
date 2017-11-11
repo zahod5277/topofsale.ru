@@ -1,5 +1,6 @@
 <head>
     <meta charset="utf-8" />
+    {if ('localizator_key' | option)!='ru'}
     {if $_modx->resource.template==3}
         {var $title = $_modx->runSnippet('pdoField',[
         'field' => 'pagetitle',
@@ -12,10 +13,27 @@
                 {var $title = $_modx->resource.pagetitle~'| topofsale.ru'} 
             {/if}
     {/if}
+    {if $_modx->resource.description?}
+        {var $description = $_modx->resource.description}
+    {/if}
+    {/if}
+    {if ('localizator_key' | option)=='ru'}
+        {switch $_modx->resource.template}
+        {case '1'}
+        {var $title = '🚀TOPOFSALE.RU | Интернет магазин лучших цен!'}
+        {var $description = 'В нашем интернет-магазине «TOPOFSALE.RU» Вы наверняка найдете то, что ищете. ⭐⭐⭐⭐⭐Подарок для близкого человека, презент деловому партнеру или же что-то из того, о чем Вы давно мечтали сами – все это есть у нас!🎁'}
+        {case '2','5','3'}
+        {var $title = '🚀'~$_modx->resource.pagetitle~' купить в Москве по доступной цене | topofsale.ru'}
+        {var $description = $_modx->resource.pagetitle~' недорого в интернет-магазине «TOPOFSALE.RU» по цене от 1000 рублей! ⭐⭐⭐⭐⭐Доставка по Москве и России, выгодные цены для наших клиентов!🎁'}
+        {case '4'}
+        {var $title = $_modx->resource.pagetitle~' | topofsale.ru'}
+        {var $description = $_modx->resource.pagetitle~' интернет-магазина «TOPOFSALE.RU»⭐⭐⭐⭐⭐'}
+        {/switch}
+    {/if}
     <title>{$title}</title>
     <meta name="keywords" content="keywords" />
-    {if $_modx->resource.description?}
-    <meta name="description" content="{$_modx->resource.description}" />
+    {if $description?}
+    <meta name="description" content="{$description}" />
     {/if}
     <base href="{$_modx->config.site_url}">
     <!--favicon-->
@@ -42,6 +60,6 @@
     <script src="assets/templates/default/js/modernizr-custom.min.js"></script>
     <!--styles-->
     {var $timestamp = ''|date_format:'%s'}
-    <link rel="stylesheet" type="text/css" href="assets/templates/default/css/app.min.css?{$timestamp}" />
+    <link rel="stylesheet" type="text/css" href="assets/templates/default/css/app.min.css" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
 </head>

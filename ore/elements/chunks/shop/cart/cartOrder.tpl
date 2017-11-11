@@ -22,12 +22,11 @@
                        <!--  <p class="card__text">{$product.introtext|truncate:70:'...'}</p> -->
                         <span class="card-articul__number">{'lw.product_article'|lexicon} {$product.article}</span>
                     </div>
-                    <div class="col-xs-12 col-sm-6  col-lg-3">
+                    <div class="col-xs-12 col-sm-6  col-lg-4">
                         <!-- price -->
                         <div class="cart-item-footer">
                             <div class="card-price">
-                                <span class="card-price__new">{$product.price|number:0:'.':' '}</span>
-                                <i class="fa fa-rub"></i>
+                                <span class="card-price__new">{$product.price|number:0:'.':' '} <i class="fa fa-rub"></i></span>
                                 {if $product.old_price?}
                                     <span class="card-price__old">{$product.old_price|number:0:'.':' '} <i class="fa fa-rub"></i></span>
                                 {/if}
@@ -38,15 +37,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-lg-1">
-                        <!-- articul -->
-                        <form method="post" class="ms2_form">
-                            <input type="hidden" name="key" value="{$product.key}">
-                            <div>
-                                <button type="submit" name="ms2_action" value="cart/remove" class="card-articul__delete">{'lw.product-delete' | lexicon}</button>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             {/foreach}
         </div>
@@ -54,14 +44,9 @@
             <div class="col-xs-12 col-md-8">
                 <h3>
                 <span>{'lw.totalOrderSumm' | lexicon}</span>    
-                <span class="ms2_total_cost">{$total.cost|number:0:'.':' '} <i class="fa fa-rub"></i></span>
-                <span>{'ms2_frontend_currency' | lexicon}</span>
+                <span class="ms2_total_cost">{$total.cost|number:0:'.':' '}</span>
+                <span><i class="fa fa-rub"></i></span>
                 </h3>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <a href="{'664'|url}" title="Оформить заказ" class="btn btn_form">
-                    <i class="fa fa-credit-card"></i>  {'lw.goToCheckout'|lexicon}
-                </a>
             </div>
         </div>
     </div>
