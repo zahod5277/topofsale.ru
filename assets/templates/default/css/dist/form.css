@@ -204,6 +204,26 @@ sup.warning{
     float: left;
     margin-right: 20px;
 }
+@media (min-width:561px) and (max-width: 991px){
+    .form.form_search{
+        margin-top: 19px;
+        width: 338px;
+    }   
+}
+
+@media (min-width:370px) and (max-width: 560px){
+    .form.form_search{
+        margin-top: 19px;
+        width: 199px;
+    }   
+}
+
+@media only screen and (max-width: 369px){
+  .form.form_search{
+    width: 175px;
+  }
+}
+
 
 .form.form_search .form-input{
     font-style: normal;

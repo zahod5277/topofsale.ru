@@ -62,4 +62,12 @@
     {var $timestamp = ''|date_format:'%s'}
     <link rel="stylesheet" type="text/css" href="assets/templates/default/css/app.min.css" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    {if ('localizator_key' | option)=='en'}
+        {var $lang = 'en/'}
+    {/if}
+    {if $_modx->resource.id==1}
+    <link rel="canonical" href="{$_modx->config.site_url}{$lang}"/>
+    {else}
+    <link rel="canonical" href="{$_modx->config.site_url}{$lang}{$_modx->resource.id|url}"/>
+    {/if}
 </head>

@@ -3,4 +3,5 @@
     {include 'file:chunks/common/breadcrumbs.tpl'}
     {include 'file:chunks/shop/category/category.tpl'}
     {include 'file:chunks/shop/category/looked.tpl'}
+    {include 'file:chunks/shop/category/seoText.tpl'}
 {/block}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="sync" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="sync"
+	   version="1.1">
+
+	<object class="syncObject" table="sync_objects" extends="xPDOObject">
+		<field key="sync_id" dbtype="varchar" precision="255" phptype="string" null="false" default="" index="pk"/>
+		<field key="sync_type" dbtype="varchar" precision="50" phptype="string" null="false" default="" index="pk"/>
+		<field key="sync_action" dbtype="varchar" precision="50" phptype="string" null="false" default="" index="pk"/>
+		<field key="sync_service" dbtype="varchar" precision="50" phptype="string" null="false" default="" index="pk"/>
+
+		<field key="sync_path" dbtype="varchar" precision="255" phptype="string" null="false" default=""
+			   index="index"/>
+		<field key="sync_parent" dbtype="varchar" precision="255" phptype="string" null="false" default=""
+			   index="index"/>
+		<field key="sync_resource" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false"
+			   default="0"
+			   index="index"/>
+		<field key="sync_processed" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="false"
+			   default="0" index="index"/>
+		<field key="sync_error" dbtype="int" precision="5" attributes="unsigned" phptype="integer" null="false"
+			   default="0" index="index"/>
+		<field key="sync_data" dbtype="text" phptype="array" null="true" />
+		<field key="sync_error_msg" dbtype="text" phptype="array" null="true" />
+		<field key="sync_idx" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false"
+			   default="0"
+			   index="index"/>
+
+		<index alias="PRIMARY" name="PRIMARY" primary="true" unique="false" type="BTREE">
+			<column key="sync_id" length="100" collation="A" null="false" />
+			<column key="sync_type" length="50" collation="A" null="false" />
+			<column key="sync_action" length="50" collation="A" null="false" />
+			<column key="sync_service" length="50" collation="A" null="false" />
+		</index>
+
+		<index alias="sync_path" name="sync_path" primary="false" unique="false" type="BTREE">
+			<column key="sync_path" length="" collation="A" null="false"/>
+		</index>
+		<index alias="sync_parent" name="sync_parent" primary="false" unique="false" type="BTREE">
+			<column key="sync_parent" length="" collation="A" null="false"/>
+		</index>
+		<index alias="sync_resource" name="sync_resource" primary="false" unique="false" type="BTREE">
+			<column key="sync_resource" length="" collation="A" null="false"/>
+		</index>
+		<index alias="sync_processed" name="sync_processed" primary="false" unique="false" type="BTREE">
+			<column key="sync_processed" length="" collation="A" null="false"/>
+		</index>
+		<index alias="sync_idx" name="sync_idx" primary="false" unique="false" type="BTREE">
+			<column key="sync_idx" length="" collation="A" null="false"/>
+		</index>
+
+	</object>
+
+
+</model>

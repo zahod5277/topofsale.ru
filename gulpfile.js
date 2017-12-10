@@ -29,6 +29,7 @@ gulp.task('css', function(){
         templatePath + 'css/dist/ion.rangeSlider.css',
         templatePath + 'css/dist/ion.rangeSlider.skinHTML5.css',
         templatePath + 'css/dist/schemaorg.css',
+        templatePath + 'css/dist/text-container.css',
         templatePath + 'css/font-awesome.min.css',
         templatePath + 'css/fa-viber.css',
         '/assets/components/minishop2/css/web/default.css'
@@ -46,7 +47,7 @@ gulp.task('scripts', function() {
         templatePath + 'js/script.js'
         ])
         .pipe(concat('app.min.js')) // Собираем их в кучу в новом файле libs.min.js
-        .pipe(uglify()) // Сжимаем JS файл
+        //.pipe(uglify()) // Сжимаем JS файл
         .pipe(gulp.dest(templatePath + 'js/'));
 });
 

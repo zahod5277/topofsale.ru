@@ -9,12 +9,7 @@ $(document).ready(function () {
 var App = {
     init: function () {
         $("[data-fancybox]").fancybox();
-        jQuery('[data-popup-id="#order"]').on('click', function () {
-            var productName = jQuery(this).parents('.ms2_form').find('input[name="pagetitle"]').val();
-            jQuery('#order .popup__title').html('Заказ ' + productName);
-            jQuery('#order [name="product"]').val(productName);
-        });
-        $('body').on('.radio-input[name="delivery"]', 'change', function(){
+        $('body').on('change', '#deliveries .radio-input', function(){
             App.adressTitleChanger();
         });
     },
@@ -84,8 +79,8 @@ var App = {
         $('.filter-catalog__item-level1 .active').parents('.filter-catalog__item-level1').addClass('filter-catalog__item-level1--active');
     },
     adressTitleChanger: function(){
-        if ($('.radio-input[name="delivery"]:checked').val()=='1'){
-            $('.form__title--delivery-hidden').html($('.radio-input[name="delivery"]:checked').parents('.wrap-radio').find('.delivery__description').html()
+        if ($('#deliveries .radio-input:checked').val()=='1'){
+            $('.form__title--delivery-hidden').html($('#deliveries .radio-input:checked').parents('.wrap-radio').find('.delivery__description').html()
                     + '<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa30ec3bdc16535b97e680acefe457d9c017f0823655b0330122c7f7eb8e74720&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>'
                     );
             $('.form__title--delivery').hide();

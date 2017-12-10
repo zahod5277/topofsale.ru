@@ -27,6 +27,13 @@
                         <div class="cart-item-footer">
                             <div class="card-price">
                                 <span class="card-price__new">{$product.price|number:0:'.':' '} <i class="fa fa-rub"></i></span>
+                                {if ('localizator_key' | option)=='en'}
+                                    {var $usd = $_modx->runSnippet('@FILE:snippets/CRCalc.php',[
+                                    'divider' => 'USD',
+                                    'input' => ($product.price)
+                                ])}
+                                <span class="card-price__new card-price__new--usd">~ {$usd|number:0:'.':' '} <i class="fa fa-usd"></i></span>
+                                {/if}
                                 {if $product.old_price?}
                                     <span class="card-price__old">{$product.old_price|number:0:'.':' '} <i class="fa fa-rub"></i></span>
                                 {/if}
@@ -46,6 +53,14 @@
                 <span>{'lw.totalOrderSumm' | lexicon}</span>    
                 <span class="ms2_total_cost">{$total.cost|number:0:'.':' '}</span>
                 <span><i class="fa fa-rub"></i></span>
+                {if ('localizator_key' | option)=='en'}
+                    {var $usd = $_modx->runSnippet('@FILE:snippets/CRCalc.php',[
+                    'divider' => 'USD',
+                    'input' => ($total.cost)
+                ])}
+                <span class="card-price__new card-price__new--usd">~ {$usd|number:0:'.':' '}</span>
+                <i class="fa fa-usd"></i>
+                {/if}
                 </h3>
             </div>
         </div>

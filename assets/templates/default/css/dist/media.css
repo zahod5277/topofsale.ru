@@ -66,7 +66,7 @@
 }
 
 @media only screen and (max-width: 1199px){
-  .menu-list li> a{
+  .menu-list li a{
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -157,7 +157,8 @@
 }
 
 @media screen and (max-width: 1023px){
-  .pages{
+   
+   .pages{
     width: 230px;
     right: 0;
   }
@@ -166,25 +167,12 @@
     font-size: 11px;
   }
   
-  .product-price__value{
-      float:none;
-      width: 100%;
-      text-align: left;
-      margin-bottom: 10px;
-      font-size: 1rem;
-  }
-  
 }
 
 @media only screen and (max-width: 991px){
   .button-section{
     padding-top: 40px;
     padding-bottom: 35px;
-  }
-
-  .form.form_search{
-    margin-top: 19px;
-    width: 320px;
   }
 
   .btn-search{
@@ -266,7 +254,7 @@
     border-bottom: 0;
   }
 
-  .menu-list li> a{
+  .menu-list li a{
     padding-left: 80px;
     padding-right: 0;
     font-size: 30px;
@@ -275,7 +263,7 @@
     padding-bottom: 0;
   }
 
-  .menu-list li> a:hover{
+  .menu-list li a:hover{
     background-color: rgba(253, 198, 137, .05);
   }
 
@@ -618,11 +606,7 @@
   .product-price{
     padding-top: 60px;
   }
-
-  .product-price__value{
-    width: 40%;
-  }
-
+  
   .product-price__currency{
     width: 60%;
     padding-left: 30px;
@@ -716,9 +700,6 @@
 }
 
 @media only screen and (max-width: 480px){
-  .form.form_search{
-    width: 175px;
-  }
 
   .line-filter .btn{
     width: 80%;
@@ -735,7 +716,7 @@
     margin: 0 auto 20px;
   }
 
-  .menu-list li> a{
+  .menu-list li a{
     padding-left: 20px;
     font-size: 23px;
     font-size: 1.4375rem;
@@ -849,11 +830,6 @@
 
   .product-price{
     padding-top: 20px;
-  }
-
-  .product-price__value{
-    width: 100%;
-    text-align: center;
   }
 
   .product-price__value:after{

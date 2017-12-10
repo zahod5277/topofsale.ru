@@ -11,6 +11,7 @@
             'element' => 'msProducts',
             'parents' => 2,
             'sortby' => 'publishedon',
+            'setMeta' => 0,
             'sortdir' => 'DESC',
             'includeThumbs' => 'list',
             'leftJoin' => '{

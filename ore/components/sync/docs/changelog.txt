@@ -1,0 +1,25 @@
+Changelog for baseSync
+
+1.0.5-beta (11.04.2017)
+==============
+- Add "processMS2Vendor"
+
+1.0.4-beta (11.04.2017)
+==============
+- Fix "action"
+
+1.0.3-beta (15.03.2017)
+==============
+- Fix "processMS2Images"
+
+1.0.2-beta (04.03.2017)
+==============
+- Add "store" step
+
+1.0.1-beta (28.02.2017)
+==============
+- Add "service" step
+
+1.0.0-beta
+==============
+- Initial

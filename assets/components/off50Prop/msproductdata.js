@@ -150,6 +150,12 @@ miniShop2.plugin.off50Prop = {
                 inputValue: 1,
                 checked: parseInt(config.record.sale|| 1),
                 description: '<b>[[+sale]]</b><br />' + _('ms2_product_sale_help')
+            },
+            hot: {
+                xtype: 'xcheckbox',
+                inputValue: 1,
+                checked: parseInt(config.record.hot|| 1),
+                description: '<b>[[+hot]]</b><br />' + _('ms2_product_hot_help')
             }
         };
     },
@@ -274,6 +280,11 @@ miniShop2.plugin.off50Prop = {
                 width: 50,
                 sortable: false,
                 editor: {xtype:'combo-boolean', renderer:'boolean', name: 'sale'}
+            },
+            hot: {
+                width: 50,
+                sortable: false,
+                editor: {xtype:'combo-boolean', renderer:'boolean', name: 'hot'}
             }
         };
     }

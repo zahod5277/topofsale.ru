@@ -26,6 +26,7 @@ return array(
         'backcap' => NULL,
         'jewerl_count' => NULL,
         'sale' => NULL,
+        'hot' => NULL,
     ),
     'fieldMeta' => array(
         'complect' => array(
@@ -187,6 +188,14 @@ return array(
             , 'default' => NULL
         ),
         'sale' => array(
+            'dbtype' => 'tinyint',
+            'precision' => '1',
+            'attributes' => 'unsigned',
+            'phptype' => 'boolean',
+            'null' => true,
+            'default' => 0,
+        ),
+        'hot' => array(
             'dbtype' => 'tinyint',
             'precision' => '1',
             'attributes' => 'unsigned',
@@ -497,6 +506,19 @@ return array(
         ),
         'sale' => array(
             'alias' => 'sale',
+            'primary' => false,
+            'unique' => false,
+            'type' => 'BTREE',
+            'columns' => array(
+                'sale' => array(
+                    'length' => '',
+                    'collation' => 'A',
+                    'null' => false,
+                ),
+            ),
+        ),
+        'hot' => array(
+            'alias' => 'hot',
             'primary' => false,
             'unique' => false,
             'type' => 'BTREE',
